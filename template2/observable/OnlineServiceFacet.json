@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:onlineservicefacet1",
+      "@type": "uco-observable:OnlineServiceFacet",
+      "uco-observable:location": null,
+      "uco-observable:inetLocation": null,
+      "uco-core:name": null
+    }
+  ]
+}

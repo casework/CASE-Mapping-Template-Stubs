@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-identity:": "https://ontology.unifiedcyberontology.org/uco/identity#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:birthinformationfacet1",
+      "@type": "uco-identity:BirthInformationFacet",
+      "uco-identity:birthdate": null
+    }
+  ]
+}

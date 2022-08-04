@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:memoryfacet1",
+      "@type": "uco-observable:MemoryFacet",
+      "uco-observable:isInjected": null,
+      "uco-observable:isMapped": null,
+      "uco-observable:isProtected": null,
+      "uco-observable:isVolatile": null,
+      "uco-observable:regionEndAddress": null,
+      "uco-observable:regionStartAddress": null,
+      "uco-observable:regionSize": null,
+      "uco-observable:blockType": null
+    }
+  ]
+}

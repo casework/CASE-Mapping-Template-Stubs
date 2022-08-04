@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#",
+    "uco-core:": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:calendarentryfacet1",
+      "@type": "uco-observable:CalendarEntryFacet",
+      "uco-observable:owner": null,
+      "uco-observable:attendant": null,
+      "uco-observable:location": null,
+      "uco-observable:application": null,
+      "uco-observable:isPrivate": null,
+      "uco-observable:endTime": null,
+      "uco-observable:modifiedTime": null,
+      "uco-observable:observableCreatedTime": null,
+      "uco-observable:remindTime": null,
+      "uco-observable:startTime": null,
+      "uco-observable:duration": null,
+      "uco-observable:eventStatus": null,
+      "uco-observable:eventType": null,
+      "uco-observable:recurrence": null,
+      "uco-observable:subject": null,
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#",
+    "uco-core:": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:whoiscontactfacet1",
+      "@type": "uco-observable:WhoisContactFacet",
+      "uco-observable:whoisContactType": null,
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null,
+      "uco-observable:hasChanged": null,
+      "uco-observable:state": null,
+      "uco-observable:addressValue": null,
+      "uco-observable:displayName": null
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-core:": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:address1",
+      "@type": "uco-uco-observable:Address",
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null
+    }
+  ]
+}

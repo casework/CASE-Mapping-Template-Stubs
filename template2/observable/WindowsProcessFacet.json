@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:windowsprocessfacet1",
+      "@type": "uco-observable:WindowsProcessFacet",
+      "uco-observable:startupInfo": null,
+      "uco-observable:aslrEnabled": null,
+      "uco-observable:depEnabled": null,
+      "uco-observable:ownerSID": null,
+      "uco-observable:priority": null,
+      "uco-observable:windowTitle": null
+    }
+  ]
+}

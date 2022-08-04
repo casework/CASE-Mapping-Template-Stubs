@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:libraryfacet1",
+      "@type": "uco-observable:LibraryFacet",
+      "uco-observable:libraryType": null
+    }
+  ]
+}

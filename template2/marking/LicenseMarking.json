@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-marking:": "https://ontology.unifiedcyberontology.org/uco/marking#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:licensemarking1",
+      "@type": "uco-marking:LicenseMarking",
+      "uco-marking:definitionType": null,
+      "uco-marking:license": null
+    }
+  ]
+}

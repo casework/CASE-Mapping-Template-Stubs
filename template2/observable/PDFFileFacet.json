@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:pdffilefacet1",
+      "@type": "uco-observable:PDFFileFacet",
+      "uco-observable:documentInformationDictionary": null,
+      "uco-observable:isOptimized": null,
+      "uco-observable:pdfId1": null,
+      "uco-observable:version": null,
+      "uco-observable:pdfId0": null
+    }
+  ]
+}

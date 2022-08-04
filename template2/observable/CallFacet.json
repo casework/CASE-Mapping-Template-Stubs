@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:callfacet1",
+      "@type": "uco-observable:CallFacet",
+      "uco-observable:application": null,
+      "uco-observable:from": null,
+      "uco-observable:participant": null,
+      "uco-observable:to": null,
+      "uco-observable:endTime": null,
+      "uco-observable:startTime": null,
+      "uco-observable:duration": null,
+      "uco-observable:callType": null
+    }
+  ]
+}

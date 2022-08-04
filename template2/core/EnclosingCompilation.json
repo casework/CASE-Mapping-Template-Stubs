@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-core:": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:enclosingcompilation1",
+      "@type": "uco-core:EnclosingCompilation",
+      "uco-core:object": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-marking:": "https://ontology.unifiedcyberontology.org/uco/marking#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:statementmarking1",
+      "@type": "uco-marking:StatementMarking",
+      "uco-marking:definitionType": null,
+      "uco-marking:statement": null
+    }
+  ]
+}

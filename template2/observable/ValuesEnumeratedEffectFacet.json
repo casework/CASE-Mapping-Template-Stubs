@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:valuesenumeratedeffectfacet1",
+      "@type": "uco-observable:ValuesEnumeratedEffectFacet",
+      "uco-observable:values": null
+    }
+  ]
+}

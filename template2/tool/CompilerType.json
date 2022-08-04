@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-tool:": "https://ontology.unifiedcyberontology.org/uco/tool#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:compilertype1",
+      "@type": "uco-tool:CompilerType",
+      "uco-tool:compilerInformalDescription": null,
+      "uco-tool:cpeid": null,
+      "uco-tool:swid": null
+    }
+  ]
+}

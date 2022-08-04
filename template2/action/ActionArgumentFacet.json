@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-action:": "https://ontology.unifiedcyberontology.org/uco/action#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:actionargumentfacet1",
+      "@type": "uco-action:ActionArgumentFacet",
+      "uco-action:argumentName": null,
+      "uco-action:value": null
+    }
+  ]
+}

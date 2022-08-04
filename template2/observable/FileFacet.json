@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:filefacet1",
+      "@type": "uco-observable:FileFacet",
+      "uco-observable:isDirectory": null,
+      "uco-observable:accessedTime": null,
+      "uco-observable:metadataChangeTime": null,
+      "uco-observable:modifiedTime": null,
+      "uco-observable:observableCreatedTime": null,
+      "uco-observable:sizeInBytes": null,
+      "uco-observable:allocationStatus": null,
+      "uco-observable:extension": null,
+      "uco-observable:fileName": null,
+      "uco-observable:filePath": null
+    }
+  ]
+}

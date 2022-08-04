@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:contactprofile1",
+      "@type": "uco-observable:ContactProfile",
+      "uco-observable:contactProfilePlatform": null,
+      "uco-observable:profile": null
+    }
+  ]
+}

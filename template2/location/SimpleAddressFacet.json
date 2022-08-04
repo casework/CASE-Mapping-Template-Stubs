@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-location:": "https://ontology.unifiedcyberontology.org/uco/location#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:simpleaddressfacet1",
+      "@type": "uco-location:SimpleAddressFacet",
+      "uco-location:addressType": null,
+      "uco-location:country": null,
+      "uco-location:locality": null,
+      "uco-location:postalCode": null,
+      "uco-location:region": null,
+      "uco-location:street": null
+    }
+  ]
+}

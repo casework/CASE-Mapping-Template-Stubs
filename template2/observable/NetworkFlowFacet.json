@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:networkflowfacet1",
+      "@type": "uco-observable:NetworkFlowFacet",
+      "uco-observable:dstPayload": null,
+      "uco-observable:srcPayload": null,
+      "uco-observable:ipfix": null,
+      "uco-observable:dstBytes": null,
+      "uco-observable:dstPackets": null,
+      "uco-observable:srcBytes": null,
+      "uco-observable:srcPackets": null
+    }
+  ]
+}

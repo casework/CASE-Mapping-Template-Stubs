@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-location:": "https://ontology.unifiedcyberontology.org/uco/location#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:gpscoordinatesfacet1",
+      "@type": "uco-location:GPSCoordinatesFacet",
+      "uco-location:hdop": null,
+      "uco-location:pdop": null,
+      "uco-location:tdop": null,
+      "uco-location:vdop": null
+    }
+  ]
+}

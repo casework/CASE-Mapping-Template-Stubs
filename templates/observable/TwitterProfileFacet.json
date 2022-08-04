@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#",
+    "uco-core:": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:twitterprofilefacet1",
+      "@type": "uco-observable:TwitterProfileFacet",
+      "uco-observable:profileBackgroundLocation": null,
+      "uco-observable:profileBannerLocation": null,
+      "uco-observable:profileImageLocation": null,
+      "uco-observable:profileBackgroundHash": null,
+      "uco-observable:profileBannerHash": null,
+      "uco-observable:profileImageHash": null,
+      "uco-observable:profileIsProtected": null,
+      "uco-observable:profileIsVerified": null,
+      "uco-observable:listedCount": null,
+      "uco-observable:favoritesCount": null,
+      "uco-observable:followersCount": null,
+      "uco-observable:friendsCount": null,
+      "uco-observable:statusesCount": null,
+      "uco-observable:twitterId": null,
+      "uco-observable:twitterHandle": null,
+      "uco-observable:userLocationString": null,
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null
+    }
+  ]
+}

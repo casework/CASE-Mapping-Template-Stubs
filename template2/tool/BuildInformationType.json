@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-tool:": "https://ontology.unifiedcyberontology.org/uco/tool#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:buildinformationtype1",
+      "@type": "uco-tool:BuildInformationType",
+      "uco-tool:buildConfiguration": null,
+      "uco-tool:buildUtility": null,
+      "uco-tool:compilers": null,
+      "uco-tool:libraries": null,
+      "uco-tool:compilationDate": null,
+      "uco-tool:buildID": null,
+      "uco-tool:buildLabel": null,
+      "uco-tool:buildOutputLog": null,
+      "uco-tool:buildProject": null,
+      "uco-tool:buildScript": null,
+      "uco-tool:buildVersion": null
+    }
+  ]
+}

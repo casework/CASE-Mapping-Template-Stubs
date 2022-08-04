@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:taskactiontype1",
+      "@type": "uco-observable:TaskActionType",
+      "uco-observable:iComHandlerAction": null,
+      "uco-observable:iExecAction": null,
+      "uco-observable:iShowMessageAction": null,
+      "uco-observable:iEmailAction": null,
+      "uco-observable:actionID": null,
+      "uco-observable:actionType": null
+    }
+  ]
+}

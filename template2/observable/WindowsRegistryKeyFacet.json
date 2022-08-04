@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:windowsregistrykeyfacet1",
+      "@type": "uco-observable:WindowsRegistryKeyFacet",
+      "uco-observable:creator": null,
+      "uco-observable:registryValues": null,
+      "uco-observable:modifiedTime": null,
+      "uco-observable:numberOfSubkeys": null,
+      "uco-observable:key": null
+    }
+  ]
+}

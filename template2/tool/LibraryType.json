@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-tool:": "https://ontology.unifiedcyberontology.org/uco/tool#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:librarytype1",
+      "@type": "uco-tool:LibraryType",
+      "uco-tool:libraryName": null,
+      "uco-tool:libraryVersion": null
+    }
+  ]
+}

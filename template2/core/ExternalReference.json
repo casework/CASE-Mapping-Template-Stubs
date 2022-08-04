@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-core:": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:externalreference1",
+      "@type": "uco-core:ExternalReference",
+      "uco-core:referenceURL": null,
+      "uco-core:definingContext": null,
+      "uco-core:externalIdentifier": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-identity:": "https://ontology.unifiedcyberontology.org/uco/identity#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:addressfacet1",
+      "@type": "uco-identity:AddressFacet",
+      "uco-identity:address": null
+    }
+  ]
+}

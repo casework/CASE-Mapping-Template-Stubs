@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:observableobject1",
+      "@type": "uco-observable:ObservableObject",
+      "uco-observable:hasChanged": null,
+      "uco-observable:state": null
+    }
+  ]
+}

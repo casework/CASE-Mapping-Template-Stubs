@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:unixprocessfacet1",
+      "@type": "uco-observable:UNIXProcessFacet",
+      "uco-observable:openFileDescriptor": null,
+      "uco-observable:ruid": null
+    }
+  ]
+}

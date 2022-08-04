@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:x509certificatefacet1",
+      "@type": "uco-observable:X509CertificateFacet",
+      "uco-observable:x509v3extensions": null,
+      "uco-observable:issuerHash": null,
+      "uco-observable:subjectHash": null,
+      "uco-observable:thumbprintHash": null,
+      "uco-observable:isSelfSigned": null,
+      "uco-observable:validityNotAfter": null,
+      "uco-observable:validityNotBefore": null,
+      "uco-observable:subjectPublicKeyExponent": null,
+      "uco-observable:issuer": null,
+      "uco-observable:serialNumber": null,
+      "uco-observable:signature": null,
+      "uco-observable:signatureAlgorithm": null,
+      "uco-observable:subject": null,
+      "uco-observable:subjectPublicKeyAlgorithm": null,
+      "uco-observable:subjectPublicKeyModulus": null,
+      "uco-observable:version": null
+    }
+  ]
+}

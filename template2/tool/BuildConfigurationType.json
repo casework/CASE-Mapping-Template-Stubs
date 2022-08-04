@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-tool:": "https://ontology.unifiedcyberontology.org/uco/tool#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:buildconfigurationtype1",
+      "@type": "uco-tool:BuildConfigurationType",
+      "uco-tool:configurationSettings": null,
+      "uco-tool:configurationSettingDescription": null
+    }
+  ]
+}

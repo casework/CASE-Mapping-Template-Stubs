@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:whoisregistrarinfotype1",
+      "@type": "uco-observable:WhoisRegistrarInfoType",
+      "uco-observable:geolocationAddress": null,
+      "uco-observable:contactPhoneNumber": null,
+      "uco-observable:emailAddress": null,
+      "uco-observable:referralURL": null,
+      "uco-observable:whoisServer": null,
+      "uco-observable:registrarGUID": null,
+      "uco-observable:registrarID": null,
+      "uco-observable:registrarName": null
+    }
+  ]
+}

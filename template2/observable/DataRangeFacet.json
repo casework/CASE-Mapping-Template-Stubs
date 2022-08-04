@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:datarangefacet1",
+      "@type": "uco-observable:DataRangeFacet",
+      "uco-observable:rangeOffset": null,
+      "uco-observable:rangeSize": null,
+      "uco-observable:rangeOffsetType": null
+    }
+  ]
+}

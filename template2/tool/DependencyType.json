@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-tool:": "https://ontology.unifiedcyberontology.org/uco/tool#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:dependencytype1",
+      "@type": "uco-tool:DependencyType",
+      "uco-tool:dependencyDescription": null,
+      "uco-tool:dependencyType": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-tool:": "https://ontology.unifiedcyberontology.org/uco/tool#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:buildfacet1",
+      "@type": "uco-tool:BuildFacet",
+      "uco-tool:buildInformation": null
+    }
+  ]
+}

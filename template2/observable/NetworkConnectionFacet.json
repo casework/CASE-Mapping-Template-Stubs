@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable:": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:networkconnectionfacet1",
+      "@type": "uco-observable:NetworkConnectionFacet",
+      "uco-observable:src": null,
+      "uco-observable:dst": null,
+      "uco-observable:protocols": null,
+      "uco-observable:isActive": null,
+      "uco-observable:endTime": null,
+      "uco-observable:startTime": null,
+      "uco-observable:destinationPort": null,
+      "uco-observable:sourcePort": null
+    }
+  ]
+}
