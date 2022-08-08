@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:x509v3extensionsfacet1",
+      "@type": "uco-observable:X509V3ExtensionsFacet",
+      "uco-observable:privateKeyUsagePeriodNotAfter": null,
+      "uco-observable:privateKeyUsagePeriodNotBefore": null,
+      "uco-observable:authorityKeyIdentifier": null,
+      "uco-observable:basicConstraints": null,
+      "uco-observable:certificatePolicies": null,
+      "uco-observable:crlDistributionPoints": null,
+      "uco-observable:extendedKeyUsage": null,
+      "uco-observable:inhibitAnyPolicy": null,
+      "uco-observable:issuerAlternativeName": null,
+      "uco-observable:keyUsage": null,
+      "uco-observable:nameConstraints": null,
+      "uco-observable:policyConstraints": null,
+      "uco-observable:policyMappings": null,
+      "uco-observable:subjectAlternativeName": null,
+      "uco-observable:subjectDirectoryAttributes": null,
+      "uco-observable:subjectKeyIdentifier": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:useraccountfacet1",
+      "@type": "uco-observable:UserAccountFacet",
+      "uco-observable:canEscalatePrivs": null,
+      "uco-observable:isPrivileged": null,
+      "uco-observable:isServiceAccount": null,
+      "uco-observable:homeDirectory": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

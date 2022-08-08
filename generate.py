@@ -7,6 +7,7 @@ from typing import Union
 from case_utils.namespace import *
 import case_utils.ontology
 from case_utils.ontology.version_info import CURRENT_CASE_VERSION
+import importlib.resources
 
 
 #NOTICE
@@ -94,30 +95,33 @@ def makedirs(directory):
     os.makedirs(f'{directory}',exist_ok = True)
 
 class main:
-    def __init__(self,ontology_dir:str,directory:str = "templates", useCaseUtils:bool = False, short:bool = False ):
+    def __init__(self,ontology_dir:str = None,directory:str = "templates", useCaseUtils:bool = False, short:bool = False ):
         makedirs(directory)
 
         self.switch = useCaseUtils
-        if "," in ontology_dir:
+        if not ontology_dir:
+            pass
+        elif "," in ontology_dir:
             ontology_dir = ontology_dir.split(",")
         else:
             ontology_dir = [ontology_dir]
         self.generate_short = short
         self.onto_dir = ontology_dir
         self.prepad = ""
-        self.files_dir = []
-        for onto in ontology_dir:
-            if os.path.isdir(onto):
-                for onto in self.onto_dir:
-                    for root, dirs, files in os.walk(onto, topdown = False):
-                       for name in files:
-                           if name.endswith(".ttl"):
-                              adir = os.path.join(root, name)
-                              if adir not in self.files_dir:
-                                  self.files_dir.append(adir)
-            elif os.path.isfile(onto):
-              if adir not in self.files_dir:
-                  self.files_dir.append(adir)
+        if ontology_dir:
+            self.files_dir = []
+            for onto in ontology_dir:
+                if os.path.isdir(onto):
+                    for onto in self.onto_dir:
+                        for root, dirs, files in os.walk(onto, topdown = False):
+                           for name in files:
+                               if name.endswith(".ttl"):
+                                  adir = os.path.join(root, name)
+                                  if adir not in self.files_dir:
+                                      self.files_dir.append(adir)
+                elif os.path.isfile(onto):
+                  if adir not in self.files_dir:
+                      self.files_dir.append(adir)
         self.directory = directory
 
     def paduco(self,string):
@@ -163,12 +167,20 @@ class main:
 
     def generate(self):
         g = rdflib.Graph()
-        for file in self.files_dir:
-            g.parse(file)
-        if self.switch:
+        if self.onto_dir:
+            for file in self.files_dir:
+                g.parse(file)
+            if self.switch:
+                case_utils.ontology.load_subclass_hierarchy(g)
+        else:
+            ttl_filename = "case-"+CURRENT_CASE_VERSION+".ttl"
+            ttl_data = importlib.resources.read_text(case_utils.ontology, ttl_filename)
+            g.parse(data=ttl_data)
             case_utils.ontology.load_subclass_hierarchy(g)
-
-        self.case_version = str([list(i) for i in g.query('SELECT ?s ?p ?o WHERE{?s owl:versionInfo ?o}')][0][2])
+        try:
+            self.case_version = str([list(i) for i in g.query('SELECT ?s ?p ?o WHERE{?s owl:versionInfo ?o}')][0][2])
+        except:
+            self.case_version = CURRENT_CASE_VERSION
 
         sh_path = [i for i in g.query("SELECT ?s ?p ?o WHERE {?s sh:path ?o}")]
         ot = {}

@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:contactlistfacet1",
+      "@type": "uco-observable:ContactListFacet",
+      "uco-observable:sourceApplication": null,
+      "uco-observable:contact": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

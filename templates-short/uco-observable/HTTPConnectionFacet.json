@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:httpconnectionfacet1",
+      "@type": "uco-observable:HTTPConnectionFacet",
+      "uco-observable:httpMessageBodyData": null,
+      "uco-observable:httpRequestHeader": null,
+      "uco-observable:httpMesageBodyLength": null,
+      "uco-observable:requestMethod": null,
+      "uco-observable:requestValue": null,
+      "uco-observable:requestVersion": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

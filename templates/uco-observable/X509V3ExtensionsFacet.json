@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#",
+    "uco-action": "https://ontology.unifiedcyberontology.org/uco/action#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:x509v3extensionsfacet1",
+      "@type": "uco-observable:X509V3ExtensionsFacet",
+      "uco-observable:privateKeyUsagePeriodNotAfter": null,
+      "uco-observable:privateKeyUsagePeriodNotBefore": null,
+      "uco-observable:authorityKeyIdentifier": null,
+      "uco-observable:basicConstraints": null,
+      "uco-observable:certificatePolicies": null,
+      "uco-observable:crlDistributionPoints": null,
+      "uco-observable:extendedKeyUsage": null,
+      "uco-observable:inhibitAnyPolicy": null,
+      "uco-observable:issuerAlternativeName": null,
+      "uco-observable:keyUsage": null,
+      "uco-observable:nameConstraints": null,
+      "uco-observable:policyConstraints": null,
+      "uco-observable:policyMappings": null,
+      "uco-observable:subjectAlternativeName": null,
+      "uco-observable:subjectDirectoryAttributes": null,
+      "uco-observable:subjectKeyIdentifier": null,
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null,
+      "uco-action:subaction": null,
+      "uco-action:environment": null,
+      "uco-action:performer": null,
+      "uco-action:error": null,
+      "uco-action:instrument": null,
+      "uco-action:object": null,
+      "uco-action:participant": null,
+      "uco-action:result": null,
+      "uco-action:location": null,
+      "uco-action:endTime": null,
+      "uco-action:startTime": null,
+      "uco-action:actionCount": null,
+      "uco-action:actionStatus": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

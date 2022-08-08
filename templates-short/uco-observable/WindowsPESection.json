@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:windowspesection1",
+      "@type": "uco-observable:WindowsPESection",
+      "uco-observable:hashes": null,
+      "uco-observable:entropy": null,
+      "uco-observable:size": null,
+      "uco-core:name": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:relationship1",
+      "@type": "uco-core:Relationship",
+      "uco-core:target": null,
+      "uco-core:source": null,
+      "uco-core:isDirectional": null,
+      "uco-core:endTime": null,
+      "uco-core:startTime": null,
+      "uco-core:kindOfRelationship": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

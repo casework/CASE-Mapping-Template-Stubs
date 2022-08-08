@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:configurationsettingtype1",
+      "@type": "uco-tool:ConfigurationSettingType",
+      "uco-tool:itemName": null,
+      "uco-tool:itemValue": null,
+      "uco-tool:itemDescription": null,
+      "uco-tool:itemType": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-action": "https://ontology.unifiedcyberontology.org/uco/action#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:action1",
+      "@type": "uco-action:Action",
+      "uco-action:subaction": null,
+      "uco-action:environment": null,
+      "uco-action:performer": null,
+      "uco-action:error": null,
+      "uco-action:instrument": null,
+      "uco-action:object": null,
+      "uco-action:participant": null,
+      "uco-action:result": null,
+      "uco-action:location": null,
+      "uco-action:endTime": null,
+      "uco-action:startTime": null,
+      "uco-action:actionCount": null,
+      "uco-action:actionStatus": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}
