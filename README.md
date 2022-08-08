@@ -31,7 +31,6 @@ generate all uco objects from a specific ontology dir
 ```
 python generate.py -o ../UCO-master/ontology --output "uco-standalone"
 ```
-2. `python generate.py -o ../UCO-master/ontology --output "uco-standalone-short" -t True`
 
 generate all case objects from a specific ontology dir without loading a specific uco ontology
 ```
