@@ -1,7 +1,8 @@
 {
   "@context": {
     "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#",
+    "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity#"
   },
   "@graph": [
     {

@@ -201,6 +201,10 @@ class main:
         if self.generate_short:
             allkeys = list(dicto3.keys())
             for key in allkeys:
+                for prop in dicto3[key]['@graph'][0]:
+                    for k,v in obs_prefix.items():
+                        if v.strip(":") == prop.split(":")[0]:
+                            dicto3[key]['@context'][self.paduco( v.strip(":") )] = k.strip("/")+"#"
                 dicto3[key]['@version']={'case_util':caseutils_version,'ontology_version':self.case_version}
             self.dicto2 = dicto3
             return
@@ -269,7 +273,6 @@ class main:
             for k,v in deepcopy(list(dict3[key]['@graph'][0].items())):
                 if not k.startswith(self.prepad) and not k.startswith("@"):
                     dict3[key]['@graph'][0][k] = v
-                    #dict3[key]['@graph'][0].pop(k)
             for k,v in obs_prefix.items():
                 if v.strip(":") == key.split(":")[0]:
                     dict3[key]['@context'][self.paduco( v.strip(":") )] = k.strip("/")+"#"
