@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:qualificationfacet1",
+      "@type": "uco-identity:QualificationFacet"
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

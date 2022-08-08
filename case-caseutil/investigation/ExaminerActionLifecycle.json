@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "investigation": "https://ontology.caseontology.org/case/investigation#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:examineractionlifecycle1",
+      "@type": "investigation:ExaminerActionLifecycle"
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

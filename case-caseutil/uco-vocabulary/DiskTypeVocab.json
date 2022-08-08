@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:disktypevocab1",
+      "@type": "uco-vocabulary:DiskTypeVocab"
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:compilation1",
+      "@type": "uco-core:Compilation"
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

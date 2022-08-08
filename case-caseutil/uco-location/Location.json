@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-location": "https://ontology.unifiedcyberontology.org/uco/location#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:location1",
+      "@type": "uco-location:Location"
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

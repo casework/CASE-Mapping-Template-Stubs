@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-role": "https://ontology.unifiedcyberontology.org/uco/role#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:role1",
+      "@type": "uco-role:Role"
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}

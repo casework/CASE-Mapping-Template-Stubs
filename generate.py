@@ -94,7 +94,7 @@ def makedirs(directory):
     os.makedirs(f'{directory}',exist_ok = True)
 
 class main:
-    def __init__(self,ontology_dir:str,directory:str = "templates", useCaseUtils:bool = False ):
+    def __init__(self,ontology_dir:str,directory:str = "templates", useCaseUtils:bool = False, short:bool = False ):
         makedirs(directory)
 
         self.switch = useCaseUtils
@@ -102,6 +102,7 @@ class main:
             ontology_dir = ontology_dir.split(",")
         else:
             ontology_dir = [ontology_dir]
+        self.generate_short = short
         self.onto_dir = ontology_dir
         self.prepad = ""
         self.files_dir = []
@@ -196,6 +197,14 @@ class main:
             for k,v in obs_prefix.items():
                 if v.strip(":") == string.split(":")[0]:
                     dicto3[string]['@context'][self.paduco(v).strip(":")] = k.strip("/")+"#"
+
+        if self.generate_short:
+            allkeys = list(dicto3.keys())
+            for key in allkeys:
+                dicto3[key]['@version']={'case_util':caseutils_version,'ontology_version':self.case_version}
+            self.dicto2 = dicto3
+            return
+
         superclassdict = {}
         for s,p,o in g.query("SELECT ?s ?p ?o WHERE {?s rdfs:subClassOf ?o }"):
             if not o:
@@ -303,12 +312,11 @@ if __name__ == "__main__":
 
     parser.add_argument("-s", "--specific", help="specific single object name",type=str,required=False)
     parser.add_argument("-a", "--caseutil", help="[T/F] allow case_utils to load uco ontology.",type=bool,required=False,default=False)
+    parser.add_argument("-t", "--short", help="[T/F] generate short stub (no superclass properties) or full stub.",type=bool,required=False,default=False)
     args = parser.parse_args()
 
-    if args.caseutil:
-        obj = main(args.ontology,args.output,True)
-    else:
-        obj = main(args.ontology,args.output)
+    obj = main(args.ontology,args.output,args.caseutil,args.short)
+
 
     makedirs(args.output)
     obj.generate()

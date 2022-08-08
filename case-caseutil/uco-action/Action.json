@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-action": "https://ontology.unifiedcyberontology.org/uco/action#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:action1",
+      "@type": "uco-action:Action"
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}
