@@ -4,12 +4,12 @@
 
 
 [USAGE/RUN]
-  - generate.py [-o:required,-s:Optional[],--output:default="templates", -a:default = False]
+  - generate.py [-o:required,-s:Optional[],--output:default="templates", -a:default = False, -t:default = False]
     - "-o", ontology directory or string of directories delimited by "," , required.
     - "-s", specify a class by name that has at least one property, Optional. The name must be conventional to the original vocabulary eg. observable, tool, action, etc.
     - "--output", specify a specific directory to put the stubs, Optional, default = "templates"
     - "-a" True/False whether to allow case_utils to load in uco or not. The generated object will differ depending on what is within the graph. default = False.
-    - "-t" True/False whether to generate a short stub (True) or full stub (False)
+    - "-t" True/False whether to generate a short stub (True) or full stub (False). default = False
 
 
 [Examples]
