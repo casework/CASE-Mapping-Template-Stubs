@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-location": "https://ontology.unifiedcyberontology.org/uco/location#",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:gpscoordinatesfacet1",
+      "@type": "uco-location:GPSCoordinatesFacet",
+      "uco-location:hdop": null,
+      "uco-location:pdop": null,
+      "uco-location:tdop": null,
+      "uco-location:vdop": null,
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-marking": "https://ontology.unifiedcyberontology.org/uco/marking#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:termsofusemarking1",
+      "@type": "uco-marking:TermsOfUseMarking",
+      "uco-marking:definitionType": null,
+      "uco-marking:termsOfUse": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

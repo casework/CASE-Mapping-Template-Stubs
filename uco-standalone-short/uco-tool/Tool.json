@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:tool1",
+      "@type": "uco-tool:Tool",
+      "uco-tool:creator": null,
+      "uco-tool:references": null,
+      "uco-tool:servicePack": null,
+      "uco-tool:toolType": null,
+      "uco-tool:version": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

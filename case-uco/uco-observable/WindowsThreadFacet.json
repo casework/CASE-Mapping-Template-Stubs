@@ -1,0 +1,39 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:windowsthreadfacet1",
+      "@type": "uco-observable:WindowsThreadFacet",
+      "uco-observable:creationTime": null,
+      "uco-observable:parameterAddress": null,
+      "uco-observable:startAddress": null,
+      "uco-observable:priority": null,
+      "uco-observable:stackSize": null,
+      "uco-observable:threadID": null,
+      "uco-observable:context": null,
+      "uco-observable:runningStatus": null,
+      "uco-observable:securityAttributes": null,
+      "uco-observable:creationFlags": null,
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

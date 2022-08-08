@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:mftrecordfacet1",
+      "@type": "uco-observable:MftRecordFacet",
+      "uco-observable:mftFileNameAccessedTime": null,
+      "uco-observable:mftFileNameCreatedTime": null,
+      "uco-observable:mftFileNameModifiedTime": null,
+      "uco-observable:mftFileNameRecordChangeTime": null,
+      "uco-observable:mftRecordChangeTime": null,
+      "uco-observable:mftFileID": null,
+      "uco-observable:mftFileNameLength": null,
+      "uco-observable:mftFlags": null,
+      "uco-observable:mftParentID": null,
+      "uco-observable:ntfsHardLinkCount": null,
+      "uco-observable:ntfsOwnerID": null,
+      "uco-observable:ntfsOwnerSID": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

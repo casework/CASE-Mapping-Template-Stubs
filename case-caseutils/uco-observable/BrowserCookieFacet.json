@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:browsercookiefacet1",
+      "@type": "uco-observable:BrowserCookieFacet",
+      "uco-observable:application": null,
+      "uco-observable:cookieDomain": null,
+      "uco-observable:isSecure": null,
+      "uco-observable:accessedTime": null,
+      "uco-observable:expirationTime": null,
+      "uco-observable:observableCreatedTime": null,
+      "uco-observable:cookieName": null,
+      "uco-observable:cookiePath": null,
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-action": "https://ontology.unifiedcyberontology.org/uco/action#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:actionfrequencyfacet1",
+      "@type": "uco-action:ActionFrequencyFacet",
+      "uco-action:rate": null,
+      "uco-action:scale": null,
+      "uco-action:units": null,
+      "uco-action:trend": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

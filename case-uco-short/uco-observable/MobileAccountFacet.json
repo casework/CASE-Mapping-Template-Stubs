@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:mobileaccountfacet1",
+      "@type": "uco-observable:MobileAccountFacet",
+      "uco-observable:IMSI": null,
+      "uco-observable:MSISDN": null,
+      "uco-observable:MSISDNType": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

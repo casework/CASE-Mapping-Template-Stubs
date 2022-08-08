@@ -1,0 +1,36 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:computerspecificationfacet1",
+      "@type": "uco-observable:ComputerSpecificationFacet",
+      "uco-observable:networkInterface": null,
+      "uco-observable:biosDate": null,
+      "uco-observable:biosReleaseDate": null,
+      "uco-observable:currentSystemDate": null,
+      "uco-observable:localTime": null,
+      "uco-observable:systemTime": null,
+      "uco-observable:availableRam": null,
+      "uco-observable:totalRam": null,
+      "uco-observable:biosManufacturer": null,
+      "uco-observable:biosSerialNumber": null,
+      "uco-observable:biosVersion": null,
+      "uco-observable:cpu": null,
+      "uco-observable:cpuFamily": null,
+      "uco-observable:gpu": null,
+      "uco-observable:gpuFamily": null,
+      "uco-observable:hostname": null,
+      "uco-observable:processorArchitecture": null,
+      "uco-observable:timezoneDST": null,
+      "uco-observable:timezoneStandard": null,
+      "uco-observable:uptime": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:assertion1",
+      "@type": "uco-core:Assertion",
+      "uco-core:statement": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

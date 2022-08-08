@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#",
+    "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity#",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:contactfacet1",
+      "@type": "uco-observable:ContactFacet",
+      "uco-observable:contactAddress": null,
+      "uco-observable:contactAffiliation": null,
+      "uco-observable:contactEmail": null,
+      "uco-observable:contactMessaging": null,
+      "uco-observable:contactPhone": null,
+      "uco-observable:contactProfile": null,
+      "uco-observable:contactSIP": null,
+      "uco-observable:contactURL": null,
+      "uco-observable:sourceApplication": null,
+      "uco-identity:birthdate": null,
+      "uco-observable:lastTimeContacted": null,
+      "uco-observable:numberTimesContacted": null,
+      "uco-observable:contactID": null,
+      "uco-observable:displayName": null,
+      "uco-observable:firstName": null,
+      "uco-observable:lastName": null,
+      "uco-observable:middleName": null,
+      "uco-observable:namePhonetic": null,
+      "uco-observable:namePrefix": null,
+      "uco-observable:nameSuffix": null,
+      "uco-observable:contactGroup": null,
+      "uco-observable:contactNote": null,
+      "uco-observable:nickname": null,
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}

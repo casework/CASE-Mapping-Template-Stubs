@@ -1,0 +1,34 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool#",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:tool1",
+      "@type": "uco-tool:Tool",
+      "uco-tool:creator": null,
+      "uco-tool:references": null,
+      "uco-tool:servicePack": null,
+      "uco-tool:toolType": null,
+      "uco-tool:version": null,
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.9.0"
+  }
+}
