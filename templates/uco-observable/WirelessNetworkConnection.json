@@ -2,13 +2,14 @@
   "@context": {
     "kb": "http://example.org/kb/",
     "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#",
-    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#",
-    "uco-action": "https://ontology.unifiedcyberontology.org/uco/action#"
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
   },
   "@graph": [
     {
       "@id": "kb:wirelessnetworkconnection1",
       "@type": "uco-observable:WirelessNetworkConnection",
+      "uco-observable:hasChanged": null,
+      "uco-observable:state": null,
       "uco-core:externalReference": null,
       "uco-core:hasFacet": null,
       "uco-core:createdBy": null,
@@ -20,24 +21,7 @@
       "uco-core:description": null,
       "uco-core:tag": null,
       "uco-core:type": null,
-      "uco-core:id": null,
-      "uco-action:subaction": null,
-      "uco-action:environment": null,
-      "uco-action:performer": null,
-      "uco-action:error": null,
-      "uco-action:instrument": null,
-      "uco-action:object": null,
-      "uco-action:participant": null,
-      "uco-action:result": null,
-      "uco-action:location": null,
-      "uco-action:endTime": null,
-      "uco-action:startTime": null,
-      "uco-action:actionCount": null,
-      "uco-action:actionStatus": null,
-      "uco-observable:hasChanged": null,
-      "uco-observable:state": null,
-      "uco-observable:addressValue": null,
-      "uco-observable:displayName": null
+      "uco-core:id": null
     }
   ],
   "@version": {

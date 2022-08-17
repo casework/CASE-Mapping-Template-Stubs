@@ -2,26 +2,14 @@
   "@context": {
     "kb": "http://example.org/kb/",
     "investigation": "https://ontology.caseontology.org/case/investigation#",
-    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#",
-    "uco-action": "https://ontology.unifiedcyberontology.org/uco/action#"
+    "uco-action": "https://ontology.unifiedcyberontology.org/uco/action#",
+    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
   },
   "@graph": [
     {
       "@id": "kb:investigativeaction1",
       "@type": "investigation:InvestigativeAction",
       "investigation:wasInformedBy": null,
-      "uco-core:externalReference": null,
-      "uco-core:hasFacet": null,
-      "uco-core:createdBy": null,
-      "uco-core:objectMarking": null,
-      "uco-core:objectCreatedTime": null,
-      "uco-core:modifiedTime": null,
-      "uco-core:name": null,
-      "uco-core:specVersion": null,
-      "uco-core:description": null,
-      "uco-core:tag": null,
-      "uco-core:type": null,
-      "uco-core:id": null,
       "uco-action:subaction": null,
       "uco-action:environment": null,
       "uco-action:performer": null,
@@ -34,7 +22,19 @@
       "uco-action:endTime": null,
       "uco-action:startTime": null,
       "uco-action:actionCount": null,
-      "uco-action:actionStatus": null
+      "uco-action:actionStatus": null,
+      "uco-core:externalReference": null,
+      "uco-core:hasFacet": null,
+      "uco-core:createdBy": null,
+      "uco-core:objectMarking": null,
+      "uco-core:objectCreatedTime": null,
+      "uco-core:modifiedTime": null,
+      "uco-core:name": null,
+      "uco-core:specVersion": null,
+      "uco-core:description": null,
+      "uco-core:tag": null,
+      "uco-core:type": null,
+      "uco-core:id": null
     }
   ],
   "@version": {

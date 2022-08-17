@@ -76,6 +76,10 @@ obs_prefix = {  #uco vocabulary
                 str(NS_CASE_INVESTIGATION): "investigation:",
                 str(NS_CASE_VOCABULARY):'vocabulary:'}
 
+reverse_obs_prefix = {}
+for k,v in obs_prefix.items():
+    reverse_obs_prefix[v] = k
+
 def reducestring(string:str, returnChange=False):
     for k,v in obs_prefix.items():
         if k in string:
@@ -88,8 +92,6 @@ def reducestring(string:str, returnChange=False):
     else:
         return str(string)
 
-def removeuco(string):
-    return string[3:]
 
 def makedirs(directory):
     os.makedirs(f'{directory}',exist_ok = True)
@@ -107,7 +109,7 @@ class main:
             ontology_dir = [ontology_dir]
         self.generate_short = short
         self.onto_dir = ontology_dir
-        self.prepad = ""
+        self.prepad = "uco"
         if ontology_dir:
             self.files_dir = []
             for onto in ontology_dir:
@@ -125,200 +127,163 @@ class main:
         self.directory = directory
 
     def paduco(self,string):
+        v = string.split(":")[0]+":"
+        if v in reverse_obs_prefix:
+            return string #don't pad eg. investigation
+        else:
+            return self.prepad+"-"+string #if not defined, pad it.
+    def removepad(self,string):
         if string.startswith(self.prepad):
-            return string
-        elif "-" in string:
-            return string
+            return string.replace(self.prepad + "-","")
         else:
-            return self.prepad+"-"+string
+            return string
 
-    def getLineage(self,objn:str,hist:list=[]):
-        j = []
-        if objn not in self.superclassdict:
-            return []
-        if not self.superclassdict[objn]:
-            return [objn]
-        else:
-            for q in self.superclassdict[objn]:
-                if q not in hist:
-                    hist.append(q)
-                try:
-                    self.getLineage(q,hist=hist)
-                except:
-                    pass
-        if len(hist) == 1:
-            return [hist]
-        return hist
-
-    def determineContext(self,parents:Union[list,dict]):
-        d = []
-        if type(parents)==list:
-            for p in parents:
-                for k,v in obs_prefix.items():
-                    if p.split(":")[0]+":" == v:
-                        d.append(k)
-            return d
-        elif type(parents)==dict:
-            for s,t in parents.items():
-                for k,v in obs_prefix.items():
-                    if s.split(":")[0]+":" == v:
-                        d.append(k)
-            return d
-
-    def generate(self):
-        g = rdflib.Graph()
+    def load_graph(self):
+        self.g = rdflib.Graph()
         if self.onto_dir:
             for file in self.files_dir:
-                g.parse(file)
+                self.g.parse(file)
             if self.switch:
                 case_utils.ontology.load_subclass_hierarchy(g)
         else:
             ttl_filename = "case-"+CURRENT_CASE_VERSION+".ttl"
             ttl_data = importlib.resources.read_text(case_utils.ontology, ttl_filename)
-            g.parse(data=ttl_data)
-            case_utils.ontology.load_subclass_hierarchy(g)
+            self.g.parse(data=ttl_data)
+            case_utils.ontology.load_subclass_hierarchy(self.g)
+
+    def load_case_version(self):
         try:
-            self.case_version = str([list(i) for i in g.query('SELECT ?s ?p ?o WHERE{?s owl:versionInfo ?o}')][0][2])
+            self.case_version = str([list(i) for i in self.g.query('SELECT ?s ?p ?o WHERE{?s owl:versionInfo ?o}')][0][2])
         except:
             self.case_version = CURRENT_CASE_VERSION
 
-        sh_path = [i for i in g.query("SELECT ?s ?p ?o WHERE {?s sh:path ?o}")]
-        ot = {}
-        for shpath in sh_path:
-            s,p,o = shpath
-            ot[str(s)] = reducestring(str(o))
-        dicto3 = {}
-        sh_property = [i for i in g.query("SELECT ?s ?p ?o WHERE {?s sh:property ?o }")]
-        for shprop in sh_property:
-            s,p,o = shprop
-            string = reducestring(str(s))
-            dicto3[string] = {}
-            dicto3[string]['@context'] = {}
-            dicto3[string]['@graph'] = [{}]
-            dicto3[string]['@graph'][0]['@id'] = "kb:"+string.split(":")[-1].lower()+"1"
-            dicto3[string]['@graph'][0]['@type'] = string
-        for shprop in sh_property:
-            s,p,o = shprop
-            string = reducestring(str(s))
-            dicto3[string]['@graph'][0][(ot[str(o)])] = None
-            dicto3[string]['@context']['kb'] = "http://example.org/kb/"
 
-        for shprop in sh_property:
-            s,p,o = shprop
-            string = reducestring(str(s))
+    def getSubClassOf(self,name:str):
+        res = [i for i in self.g.query("SELECT ?o WHERE {{ {} rdfs:subClassOf ?o }}".format(self.removepad(name)))]
+        if res:
+            return res[0]
+        return res #comes back as list of triples
+
+    def getProperty(self,name:str):
+        res = [i for i in self.g.query("SELECT ?o WHERE {{ {} sh:property ?o }}".format(self.removepad(name)))]
+        return res #comes back as list of triples
+
+    def getPath(self,name:str):
+        res = [i for i in self.g.query("SELECT ?o WHERE {{ {} sh:path ?o }}".format(self.removepad(name)))]
+        return res #comes back as list of triples
+
+    def getUCOname(self,name):
+        return self.removepad(reducestring(name))
+
+    def getParents(self,name:str,hist: list = [] ):
+        parents = self.getSubClassOf(name)
+        if not parents:
+            return []
+        else:
+            for parent in parents: #DFS
+                p = self.getUCOname(parent)
+                if p not in hist:
+                    hist.append(p)
+                #check if each parent has parents that isn't part of hist
+                for i in self.getParents(p,hist):
+                    if i not in hist:
+                        hist.append(i)
+        return hist
+
+    def generate_bnodes(self):
+        self.bnode_dict = {}
+        for triple in self.g.query("SELECT ?s ?o WHERE { ?s sh:property ?o}"):
+            s, o = triple
+            self.bnode_dict[str(s)] = []
+            self.bnode_dict[str(s)].append(reducestring(o))
+
+        for triple in self.g.query("SELECT ?s ?o WHERE { ?s sh:path ?o}"):
+            s, o = triple
+            if str(s) not in self.bnode_dict:
+                self.bnode_dict[str(s)] = []
+            self.bnode_dict[str(s)].append(reducestring(o))
+
+    def generate_classes(self):
+        self.class_names = []
+        for triple in self.g.query("SELECT ?s ?p WHERE {?s ?p owl:Class}"):
+            s, p = triple
+            self.class_names.append(self.removepad(reducestring(s)))
+
+    def findContext(self,dict_graph:dict):
+        c = {}
+        for t in dict_graph.keys():
             for k,v in obs_prefix.items():
-                if v.strip(":") == string.split(":")[0]:
-                    dicto3[string]['@context'][self.paduco(v).strip(":")] = k.strip("/")+"#"
+                if self.paduco(t).startswith(v):
+                    c[self.paduco(v.strip(":"))] = k.strip("/") + "#"
+        return c
+
+    def load_single(self,name:str):
+        single = {'@context':{},
+                  '@graph':[{}]
+                 }
+        single['@context']['kb'] = 'http://example.org/kb/'
+        n = "".join(name.split(":")[1:])
+        single['@graph'][0]['@id'] = "kb:"+n.lower()+"1"
+        single['@graph'][0]['@type'] = self.paduco(name)
+
+        #add the properties of the object
+        props = self.getProperty(name)
+        for prop in props:
+            for p in self.bnode_dict[str(prop[0])]:
+                if p:
+                    single['@graph'][0][self.paduco(p)] = None
+
+        single['@context'].update(self.findContext({name:None}))
+        single['@context'].update(self.findContext(single['@graph'][0]))
+        single['@version']={'case_util':caseutils_version,'ontology_version':self.case_version}
+
 
         if self.generate_short:
-            allkeys = list(dicto3.keys())
-            for key in allkeys:
-                for prop in dicto3[key]['@graph'][0]:
-                    for k,v in obs_prefix.items():
-                        if v.strip(":") == prop.split(":")[0]:
-                            dicto3[key]['@context'][self.paduco( v.strip(":") )] = k.strip("/")+"#"
-                dicto3[key]['@version']={'case_util':caseutils_version,'ontology_version':self.case_version}
-            self.dicto2 = dicto3
-            return
-
-        superclassdict = {}
-        for s,p,o in g.query("SELECT ?s ?p ?o WHERE {?s rdfs:subClassOf ?o }"):
-            if not o:
-                continue
-            rs = reducestring(s)
-            rp = r"rdfs:subClassOf"
-            ro = reducestring(o)
-            if rs not in superclassdict:
-                superclassdict[rs] = [ro]
-            else:
-                superclassdict[rs].append(ro)
-        self.superclassdict = superclassdict
-
-        dict3 = {}
-        for cls in self.superclassdict.keys():
-            if cls in dicto3:
-                if dicto3[cls]['@graph']!=[{}]:
-                    dict3[cls] = dicto3[cls]
-            else:
-                dict3[cls] = {}
-
-            if '@context' not in dict3[cls]:
-                dict3[cls]['@context']:{}
-                dict3[cls]['@context'] = {"kb":'http://example.org/kb/'}
-            if '@graph' not in dict3[cls]:
-                dict3[cls]['@graph'] = [{}]
-                dict3[cls]['@graph'][0]['@id'] = "kb:"+cls.split(":")[-1].lower()+"1"
-                dict3[cls]['@graph'][0]['@type'] = self.paduco(cls)
-                for k,v in obs_prefix.items():
-                    if v.strip(":") == cls.split(":")[0]:
-                        dict3[cls]['@context'][self.paduco( v.strip(":") )] = k.strip("/")+"#"
-            parents = self.getLineage(cls)
+            pass
+        else:
+            #add the parent's properties
+            parents = self.getParents(name,[])
             for parent in parents:
-                if type(parent) == list:
-                    parent = parent[0]
-                if parent in self.superclassdict:
-                    if self.superclassdict[parent]:
-                        for supc in self.superclassdict[parent]:
-                            if supc in dicto3:
-                                if dicto3[supc]['@graph']!=[{}]:
-                                    for v in dicto3[supc]['@graph'][0].keys():
-                                        if v in dict3[cls]['@graph'][0]:
-                                            pass
-                                        else:
-                                            dict3[cls]['@graph'][0][self.paduco(v)] = None
-            tmp = {}
-            for k,v in dict3[cls]['@graph'][0].items():
-                tmp[k.replace(self.prepad,"")] = v
-
-            cont = self.determineContext(tmp)
-            if cont:
-                for co in cont:
-                    if co not in dict3[cls]['@context']:
-                        dict3[cls]['@context'][self.paduco(obs_prefix[co]).strip(":")] = co.strip("/")+"#"
+                props = self.getProperty(parent)
+                for prop in props:
+                    for node in self.bnode_dict[str(prop[0])]:
+                        single['@graph'][0][self.paduco(node)] = None
+            single['@context'].update(self.findContext(single['@graph'][0]))
+        return single
 
 
-            if self.prepad not in dict3[cls]['@graph'][0]['@type']:
-                dict3[cls]['@graph'][0]['@type'] = self.paduco(cls)
+    def generate(self):
+        self.load_graph()
+        self.load_case_version()
+        self.generate_bnodes()
 
-        allkeys = list(dict3.keys())
-        for key in allkeys:
-            for k,v in deepcopy(list(dict3[key]['@graph'][0].items())):
-                if not k.startswith(self.prepad) and not k.startswith("@"):
-                    dict3[key]['@graph'][0][k] = v
-            for k,v in obs_prefix.items():
-                if v.strip(":") == key.split(":")[0]:
-                    dict3[key]['@context'][self.paduco( v.strip(":") )] = k.strip("/")+"#"
-
-            dict3[key]['@version']={'case_util':caseutils_version,'ontology_version':self.case_version}
-        self.dicto2 = dict3
-
-
+        self.generate_classes()
         return
 
 
     def convertToJson(self,obj_name:str):
         vocab, newname = obj_name.split(":")
-        obj = self.dicto2[obj_name]
+        obj = self.load_single(obj_name)
+
         if obj == {}:
             print(f"FAILED:{obj_name}")
             return
-        nextdir = f"{self.directory}/{vocab}"
+        nextdir = f"{self.directory}/{self.paduco(vocab)}"
         makedirs(nextdir)
 
         with open(f"{nextdir}/{newname}.json", 'w') as fl:
             json.dump(obj, fl,indent=2)
             fl.close()
-        print(f"Success:{obj_name}")
+        print(f"Success:{self.paduco(obj_name)}")
 
     def run(self,name:Union[list,str] = None):
         if not name:
-            name = list(self.dicto2.keys())
-        elif type(name)==str:
-                name = [name]
+            name = self.class_names
+        else:
+            name = [self.paduco(name)]
         for k in name:
             self.convertToJson(k)
         return
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

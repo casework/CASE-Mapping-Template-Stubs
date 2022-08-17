@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "kb": "http://example.org/kb/",
+    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:triggertype1",
+      "@type": "uco-observable:TriggerType",
+      "uco-observable:isEnabled": null,
+      "uco-observable:triggerBeginTime": null,
+      "uco-observable:triggerEndTime": null,
+      "uco-observable:triggerDelay": null,
+      "uco-observable:triggerMaxRunTime": null,
+      "uco-observable:triggerSessionChangeType": null,
+      "uco-observable:triggerFrequency": null,
+      "uco-observable:triggerType": null
+    }
+  ],
+  "@version": {
+    "case_util": "0.6.0",
+    "ontology_version": "0.7.0"
+  }
+}
