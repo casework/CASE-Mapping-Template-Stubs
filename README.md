@@ -36,9 +36,6 @@ Folders:
 
 [OUTPUT]: json-ld file with additional @version key for what version of case and case_utils generated the file.
 
->>>>>>> 1cf0704b4d91e28e19ff423476c27beef00905af
-
-
 [NOTE]
 1. we load the ontology ttl files directly, implying the graph is blank. The uco ontology can be loaded via case_utils load_subclass_hierarchy. Because it loads the uco ontology as well, some of the uco ontology will be generated too due to it being present in the triple preprocessing.
 
