@@ -37,3 +37,8 @@ python generate.py -s investigation:Authorization
 2. in `generate.py`, there is another 'obs_prefix' commented out which uses the direct uco ontology prefixes instead of being padded with "uco-", use it you want a stand-alone uco object with its original vocabulary prefixes: eg. case uses "uco-core" while the uco ontology uses "core".
 
 3. The code queries the graph for all triples with sh:property and sh:path to build the entire list, therefore classes that do not have direct properties (properties not from superclass inheritence) will not be geneated using the `--short True` flag. By default, the flag is set to `--short False` which additionally tries to pull triples that declare a subclass from a superclass, thereby adding superclass properties to the stub.
+
+
+## Licensing
+
+Portions of this repository contributed by NIST are governed by the [NIST Software Licensing Statement](THIRD_PARTY_LICENSES.md#nist-software-licensing-statement).
