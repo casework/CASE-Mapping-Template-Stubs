@@ -133,7 +133,7 @@ class main:
     ) -> None:
         makedirs(directory)
 
-        self.switch = useCaseUtils
+        self._switch = useCaseUtils
         if ontology_dir is None or ontology_dir == "":
             pass
         elif "," in ontology_dir:
@@ -158,6 +158,10 @@ class main:
                     if adir not in self.files_dir:
                         self.files_dir.append(adir)
         self.directory = directory
+
+    @property
+    def switch(self) -> bool:
+        return self._switch
 
     def paduco(self, string: str) -> str:
         v = string.split(":")[0] + ":"
