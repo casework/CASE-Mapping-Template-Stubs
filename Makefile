@@ -33,7 +33,8 @@ all: \
   .venv.done.log
 	source venv/bin/activate \
 	  && mypy \
-	    --strict $(py_srcfiles)
+	    --strict \
+	    $(py_srcfiles)
 	touch $@
 
 # This virtual environment is meant to be built once and then persist, even through 'make clean'.
