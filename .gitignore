@@ -1,6 +1,8 @@
 *.swp
+.*.done.log
 .DS_Store
 .idea
 __pycache__
 .ipynb_checkpoints
 .venv-pre-commit
+venv
