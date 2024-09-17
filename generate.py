@@ -1,3 +1,25 @@
+#!/usr/bin/env python3
+
+# NOTICE
+# This software was produced for the U.S. Government under contract FA8702-22-C-0001,
+# and is subject to the Rights in Data-General Clause 52.227-14, Alt. IV (DEC 2007)
+# ©2022 The MITRE Corporation. All Rights Reserved.
+# Released under PRS 18-4297.
+
+# Portions of this file contributed by NIST are governed by the
+# following statement:
+#
+# This software was developed at the National Institute of Standards
+# and Technology by employees of the Federal Government in the course
+# of their official duties. Pursuant to title 17 Section 105 of the
+# United States Code this software is not subject to copyright
+# protection and is in the public domain. NIST assumes no
+# responsibility whatsoever for its use by other parties, and makes
+# no guarantees, expressed or implied, about its quality,
+# reliability, or any other characteristic.
+#
+# We would appreciate acknowledgement if the software is used.
+
 import argparse
 import importlib.resources
 import json
@@ -23,13 +45,6 @@ from case_utils.namespace import (
     NS_UCO_VOCABULARY,
 )
 from case_utils.ontology.version_info import CURRENT_CASE_VERSION
-
-# NOTICE
-# This software was produced for the U.S. Government under contract FA8702-22-C-0001,
-# and is subject to the Rights in Data-General Clause 52.227-14, Alt. IV (DEC 2007)
-# ©2022 The MITRE Corporation. All Rights Reserved.
-# Released under PRS 18-4297.
-
 
 __version__ = "0.0.2"
 
