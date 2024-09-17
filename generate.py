@@ -2,7 +2,7 @@ import argparse
 import importlib.resources
 import json
 import os
-from typing import Union
+from typing import Optional, Union
 
 import case_utils.ontology
 import rdflib
@@ -111,7 +111,7 @@ def makedirs(directory: str) -> None:
 class main:
     def __init__(
         self,
-        ontology_dir: str = None,
+        ontology_dir: Optional[str] = None,
         directory: str = "templates",
         useCaseUtils: bool = False,
         short: bool = False,
@@ -119,7 +119,7 @@ class main:
         makedirs(directory)
 
         self.switch = useCaseUtils
-        if not ontology_dir:
+        if ontology_dir is None or ontology_dir == "":
             pass
         elif "," in ontology_dir:
             ontology_dir = ontology_dir.split(",")
@@ -144,20 +144,20 @@ class main:
                         self.files_dir.append(adir)
         self.directory = directory
 
-    def paduco(self, string):
+    def paduco(self, string: str) -> str:
         v = string.split(":")[0] + ":"
         if v in reverse_obs_prefix:
             return string  # don't pad eg. investigation
         else:
             return self.prepad + "-" + string  # if not defined, pad it.
 
-    def removepad(self, string):
+    def removepad(self, string: str) -> str:
         if string.startswith(self.prepad):
             return string.replace(self.prepad + "-", "")
         else:
             return string
 
-    def load_graph(self):
+    def load_graph(self) -> None:
         self.g = rdflib.Graph()
         if self.onto_dir:
             for file in self.files_dir:
@@ -170,7 +170,7 @@ class main:
             self.g.parse(data=ttl_data)
             case_utils.ontology.load_subclass_hierarchy(self.g)
 
-    def load_case_version(self):
+    def load_case_version(self) -> None:
         try:
             self.case_version = str(
                 [
@@ -232,7 +232,7 @@ class main:
                         hist.append(i)
         return hist
 
-    def generate_bnodes(self):
+    def generate_bnodes(self) -> None:
         self.bnode_dict = {}
         for triple in self.g.query("SELECT ?s ?o WHERE { ?s sh:property ?o}"):
             s, o = triple
@@ -245,7 +245,7 @@ class main:
                 self.bnode_dict[str(s)] = []
             self.bnode_dict[str(s)].append(reducestring(o))
 
-    def generate_classes(self):
+    def generate_classes(self) -> None:
         self.class_names = []
         for triple in self.g.query("SELECT ?s ?p WHERE {?s ?p owl:Class}"):
             s, p = triple
@@ -301,7 +301,7 @@ class main:
         self.generate_classes()
         return
 
-    def convertToJson(self, obj_name: str):
+    def convertToJson(self, obj_name: str) -> None:
         vocab, newname = obj_name.split(":")
         obj = self.load_single(obj_name)
 
@@ -316,7 +316,7 @@ class main:
             fl.close()
         print(f"Success:{self.paduco(obj_name)}")
 
-    def run(self, name: Union[list, str] = None):
+    def run(self, name: Union[None, list, str] = None) -> None:
         if not name:
             name = self.class_names
         else:
