@@ -157,7 +157,11 @@ class main:
                 elif os.path.isfile(onto):
                     if adir not in self.files_dir:
                         self.files_dir.append(adir)
-        self.directory = directory
+        self._directory = directory
+
+    @property
+    def directory(self) -> str:
+        return self._directory
 
     @property
     def switch(self) -> bool:
