@@ -18,12 +18,23 @@ SHELL := /bin/bash
 
 PYTHON3 ?= python3
 
+py_srcfiles := \
+  generate.py
+
 all: \
   .venv-pre-commit/var/.pre-commit-built.log
 
 .PHONY: \
   check-supply-chain \
   check-supply-chain-pre-commit
+
+.mypy.done.log: \
+  $(py_srcfiles) \
+  .venv.done.log
+	source venv/bin/activate \
+	  && mypy \
+	    --strict $(py_srcfiles)
+	touch $@
 
 # This virtual environment is meant to be built once and then persist, even through 'make clean'.
 # If a recipe is written to remove this flag file, it should first run `pre-commit uninstall`.
