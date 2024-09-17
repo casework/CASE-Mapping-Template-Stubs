@@ -104,7 +104,7 @@ def reducestring(string: str) -> str:
     return str(string)
 
 
-def makedirs(directory):
+def makedirs(directory: str) -> None:
     os.makedirs(f"{directory}", exist_ok=True)
 
 
