@@ -115,7 +115,7 @@ class main:
         directory: str = "templates",
         useCaseUtils: bool = False,
         short: bool = False,
-    ):
+    ) -> None:
         makedirs(directory)
 
         self.switch = useCaseUtils
