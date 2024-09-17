@@ -293,7 +293,7 @@ class main:
             single["@context"].update(self.findContext(single["@graph"][0]))
         return single
 
-    def generate(self):
+    def generate(self) -> None:
         self.load_graph()
         self.load_case_version()
         self.generate_bnodes()
