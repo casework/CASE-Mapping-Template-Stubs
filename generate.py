@@ -298,10 +298,6 @@ class main:
 
         single["@context"].update(self.findContext({name: None}))
         single["@context"].update(self.findContext(single["@graph"][0]))
-        single["@version"] = {
-            "case_util": caseutils_version,
-            "ontology_version": self.case_version,
-        }
 
         if self.generate_short:
             pass
