@@ -97,17 +97,11 @@ for k, v in obs_prefix.items():
     reverse_obs_prefix[v] = k
 
 
-def reducestring(string: str, returnChange=False):
+def reducestring(string: str) -> str:
     for k, v in obs_prefix.items():
         if k in string:
-            if returnChange:
-                return string.replace(k, v), True
-            else:
-                return string.replace(k, v)
-    if returnChange:
-        return str(string), False
-    else:
-        return str(string)
+            return string.replace(k, v)
+    return str(string)
 
 
 def makedirs(directory):
