@@ -1,4 +1,10 @@
 repos:
+  - repo: https://github.com/casework/rdf-toolkit-action
+    rev: 2.0.3
+    hooks:
+      - id: rdf-toolkit-normalizer
+        args:
+            - --autofix
   - repo: https://github.com/psf/black
     rev: 24.8.0
     hooks:

@@ -1,3 +1,4 @@
+*.jar
 *.swp
 .*.done.log
 .DS_Store
