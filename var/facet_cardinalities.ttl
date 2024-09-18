@@ -1,0 +1,833 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Account>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/AccountFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/AlternateDataStream>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/AlternateDataStreamFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/AndroidDevice>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/AndroidDeviceFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Application>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/ApplicationFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccount>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/ApplicationAccountFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/ArchiveFile>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/ArchiveFileFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Audio>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/AudioFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/AutonomousSystem>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/AutonomousSystemFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/BluetoothAddress>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/BluetoothAddressFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/BrowserBookmark>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/BrowserBookmarkFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/BrowserCookie>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/BrowserCookieFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Calendar>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/CalendarFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/CalendarEntry>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/CalendarEntryFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Call>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/CallFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/CapturedTelecommunicationsInformation>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/CapturedTelecommunicationsInformationFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/CellSite>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/CellSiteFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/ComputerSpecification>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/ComputerSpecificationFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/ContactList>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/ContactListFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/ContentData>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/ContentDataFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Device>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/DeviceFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/DigitalAccount>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/DigitalAccountFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/DigitalSignatureInfo>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/DigitalSignatureInfoFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Disk>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/DiskFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/DiskPartition>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/DiskPartitionFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/DomainName>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/DomainNameFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/EmailAccount>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/EmailAccountFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/EmailAddress>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/EmailAddressFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/EmailMessage>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/EmailMessageFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/EventRecord>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/EventRecordFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/File>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/FileFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/FileSystem>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/FileSystemFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/GeoLocationEntry>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/GeoLocationEntryFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/GeoLocationLog>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/GeoLocationLogFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/GeoLocationTrack>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/GeoLocationTrackFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/HTTPConnection>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/HTTPConnectionFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/ICMPConnection>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/ICMPConnectionFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/IPv4Address>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/IPv4AddressFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/IPv6Address>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/IPv6AddressFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Image>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/ImageFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/InstantMessagingAddress>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/InstantMessagingAddressFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Library>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/LibraryFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Memory>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/MemoryFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Message>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/MessageFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/MessageThread>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/MessageThreadFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/MobileAccount>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/MobileAccountFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/MobileDevice>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/MobileDeviceFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Mutex>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/MutexFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/NTFSFile>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/NTFSFileFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/NetworkConnection>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/NetworkConnectionFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/NetworkFlow>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/NetworkFlowFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/NetworkInterface>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/NetworkInterfaceFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Note>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/NoteFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/OnlineService>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/OnlineServiceFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystem>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/OperatingSystemFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/PDFFile>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/PDFFileFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccount>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/PhoneAccountFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Process>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/ProcessFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Profile>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/ProfileFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/RasterPicture>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/RasterPictureFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/RecoveredObject>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/RecoveredObjectFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/SIMCard>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/SIMCardFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/SIPAddress>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/SIPAddressFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/SMSMessage>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/SMSMessageFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/SQLiteBlob>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/SQLiteBlobFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Software>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/SoftwareFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/StorageMedium>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/StorageMediumFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/SymbolicLink>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/SymbolicLinkFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/TCPConnection>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/TCPConnectionFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/TableField>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/TableFieldFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/UNIXAccount>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/UNIXAccountFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/UNIXProcess>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/UNIXProcessFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/URL>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/URLFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/URLHistory>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/URLHistoryFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/URLVisit>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/URLVisitFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/UserAccount>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/UserAccountFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/UserSession>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/UserSessionFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/Volume>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/VolumeFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WhoIs>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WhoIsFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WifiAddress>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WifiAddressFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsAccount>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsAccountFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsActiveDirectoryAccount>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsActiveDirectoryAccountFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsComputerSpecification>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsComputerSpecificationFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsPEBinaryFile>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsPEBinaryFileFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsPrefetch>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsPrefetchFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsProcess>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsProcessFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsRegistryHive>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsRegistryHiveFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsRegistryKey>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsRegistryKeyFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsService>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsServiceFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsTask>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsTaskFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WindowsThread>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WindowsThreadFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/WirelessNetworkConnection>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/WirelessNetworkConnectionFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+<https://ontology.unifiedcyberontology.org/uco/observable/X509Certificate>
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty <https://ontology.unifiedcyberontology.org/uco/core/hasFacet> ;
+		owl:onClass <https://ontology.unifiedcyberontology.org/uco/observable/X509CertificateFacet> ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
