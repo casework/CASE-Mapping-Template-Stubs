@@ -29,6 +29,7 @@ all: \
 .PHONY: \
   all-tests \
   all-var \
+  check-pytest \
   check-supply-chain \
   check-supply-chain-pre-commit
 
@@ -90,7 +91,16 @@ all-var: \
 
 check: \
   .venv-pre-commit/var/.pre-commit-built.log \
+  check-pytest \
   all-tests
+
+check-pytest: \
+  .venv.done.log
+	source venv/bin/activate \
+	  && pytest \
+	    --doctest-modules \
+	    --log-level=DEBUG \
+	    $(py_srcfiles)
 
 check-supply-chain: \
   check-supply-chain-pre-commit

@@ -1,3 +1,4 @@
 PyLD
 case-utils
 mypy
+pytest
