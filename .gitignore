@@ -6,4 +6,5 @@
 __pycache__
 .ipynb_checkpoints
 .venv-pre-commit
+all-*.mk
 venv

@@ -24,6 +24,8 @@ py_srcfiles := \
 all: \
   .venv-pre-commit/var/.pre-commit-built.log \
   all-tests
+	$(MAKE) \
+	  --directory templates
 
 .PHONY: \
   all-tests \
