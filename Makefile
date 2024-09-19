@@ -138,3 +138,13 @@ check-supply-chain-pre-commit: \
 	    >&2
 
 clean:
+	@$(MAKE) \
+	  --directory tests \
+	  clean
+	@$(MAKE) \
+	  --directory var \
+	  clean
+	@rm -f \
+	  .venv.done.log
+	@rm -rf \
+	  venv
