@@ -32,7 +32,17 @@ clean:
 facet_cardinalities.ttl: \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/src/facet_cardinalities_ttl.py
+	rm -f __$@ _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && python3 $(top_srcdir)/src/facet_cardinalities_ttl.py \
-	    _$@
+	    __$@
+	# Normalize if normalizing jar has already been downloaded from pre-commit.
+	test ! -r $(top_srcdir)/rdf-toolkit.jar \
+	  || java -jar $(top_srcdir)/rdf-toolkit.jar \
+	    --inline-blank-nodes \
+	    --source __$@ \
+	    --source-format turtle \
+	    --target _$@ \
+	    --target-format turtle
+	if [ -r _$@ ]; then rm __$@ ; else mv __$@ _$@ ; fi
 	mv _$@ $@
