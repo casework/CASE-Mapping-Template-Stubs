@@ -1,11 +1,12 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location#"
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:simpleaddressfacet1",
+            "@id": "kb:SimpleAddressFacet-1",
             "@type": "uco-location:SimpleAddressFacet",
             "uco-location:addressType": null,
             "uco-location:country": null,
@@ -14,9 +15,5 @@
             "uco-location:region": null,
             "uco-location:street": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

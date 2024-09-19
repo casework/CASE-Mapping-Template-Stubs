@@ -1,11 +1,12 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:extinodefacet1",
+            "@id": "kb:ExtInodeFacet-1",
             "@type": "uco-observable:ExtInodeFacet",
             "uco-observable:extDeletionTime": null,
             "uco-observable:extFileType": null,
@@ -17,9 +18,5 @@
             "uco-observable:extSGID": null,
             "uco-observable:extSUID": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

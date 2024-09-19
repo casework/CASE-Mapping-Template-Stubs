@@ -1,45 +1,42 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:windowspeoptionalheader1",
+            "@id": "kb:WindowsPEOptionalHeader-1",
             "@type": "uco-observable:WindowsPEOptionalHeader",
-            "uco-observable:addressOfEntryPoint": null,
-            "uco-observable:baseOfCode": null,
-            "uco-observable:checksum": null,
-            "uco-observable:dllCharacteristics": null,
-            "uco-observable:fileAlignment": null,
-            "uco-observable:imageBase": null,
-            "uco-observable:loaderFlags": null,
-            "uco-observable:magic": null,
-            "uco-observable:majorImageVersion": null,
-            "uco-observable:majorLinkerVersion": null,
-            "uco-observable:majorOSVersion": null,
-            "uco-observable:majorSubsystemVersion": null,
-            "uco-observable:minorImageVersion": null,
-            "uco-observable:minorLinkerVersion": null,
-            "uco-observable:minorOSVersion": null,
-            "uco-observable:minorSubsystemVersion": null,
-            "uco-observable:numberOfRVAAndSizes": null,
-            "uco-observable:sectionAlignment": null,
-            "uco-observable:sizeOfCode": null,
-            "uco-observable:sizeOfHeaders": null,
-            "uco-observable:sizeOfHeapCommit": null,
-            "uco-observable:sizeOfHeapReserve": null,
-            "uco-observable:sizeOfImage": null,
-            "uco-observable:sizeOfInitializedData": null,
-            "uco-observable:sizeOfStackCommit": null,
-            "uco-observable:sizeOfStackReserve": null,
-            "uco-observable:sizeOfUninitializedData": null,
-            "uco-observable:subsystem": null,
-            "uco-observable:win32VersionValue": null
+            "uco-observable:addressOfEntryPoint": [],
+            "uco-observable:baseOfCode": [],
+            "uco-observable:checksum": [],
+            "uco-observable:dllCharacteristics": [],
+            "uco-observable:fileAlignment": [],
+            "uco-observable:imageBase": [],
+            "uco-observable:loaderFlags": [],
+            "uco-observable:magic": [],
+            "uco-observable:majorImageVersion": [],
+            "uco-observable:majorLinkerVersion": [],
+            "uco-observable:majorOSVersion": [],
+            "uco-observable:majorSubsystemVersion": [],
+            "uco-observable:minorImageVersion": [],
+            "uco-observable:minorLinkerVersion": [],
+            "uco-observable:minorOSVersion": [],
+            "uco-observable:minorSubsystemVersion": [],
+            "uco-observable:numberOfRVAAndSizes": [],
+            "uco-observable:sectionAlignment": [],
+            "uco-observable:sizeOfCode": [],
+            "uco-observable:sizeOfHeaders": [],
+            "uco-observable:sizeOfHeapCommit": [],
+            "uco-observable:sizeOfHeapReserve": [],
+            "uco-observable:sizeOfImage": [],
+            "uco-observable:sizeOfInitializedData": [],
+            "uco-observable:sizeOfStackCommit": [],
+            "uco-observable:sizeOfStackReserve": [],
+            "uco-observable:sizeOfUninitializedData": [],
+            "uco-observable:subsystem": [],
+            "uco-observable:win32VersionValue": []
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

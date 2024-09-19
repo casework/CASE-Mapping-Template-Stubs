@@ -1,17 +1,14 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity#"
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:birthinformationfacet1",
+            "@id": "kb:BirthInformationFacet-1",
             "@type": "uco-identity:BirthInformationFacet",
             "uco-identity:birthdate": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

@@ -1,19 +1,16 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:datarangefacet1",
+            "@id": "kb:DataRangeFacet-1",
             "@type": "uco-observable:DataRangeFacet",
             "uco-observable:rangeOffset": null,
             "uco-observable:rangeOffsetType": null,
             "uco-observable:rangeSize": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

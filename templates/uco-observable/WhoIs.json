@@ -1,31 +1,48 @@
 {
     "@context": {
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "kb": "http://example.org/kb/",
-        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:whois1",
+            "@id": "kb:WhoIs-1",
             "@type": "uco-observable:WhoIs",
+            "case-investigation:wasDerivedFrom": [],
             "uco-core:createdBy": null,
-            "uco-core:description": null,
-            "uco-core:externalReference": null,
-            "uco-core:hasFacet": null,
-            "uco-core:id": null,
-            "uco-core:modifiedTime": null,
+            "uco-core:description": [],
+            "uco-core:externalReference": [],
+            "uco-core:hasFacet": {
+                "@id": "kb:WhoIsFacet-1",
+                "@type": "uco-observable:WhoIsFacet",
+                "uco-observable:creationDate": null,
+                "uco-observable:dnssec": null,
+                "uco-observable:domainID": null,
+                "uco-observable:domainName": null,
+                "uco-observable:expirationDate": null,
+                "uco-observable:ipAddress": null,
+                "uco-observable:lookupDate": null,
+                "uco-observable:nameServer": [],
+                "uco-observable:regionalInternetRegistry": null,
+                "uco-observable:registrantContactInfo": null,
+                "uco-observable:registrantIDs": [],
+                "uco-observable:registrarInfo": null,
+                "uco-observable:remarks": null,
+                "uco-observable:serverName": null,
+                "uco-observable:sponsoringRegistrar": null,
+                "uco-observable:status": null,
+                "uco-observable:updatedDate": null
+            },
+            "uco-core:modifiedTime": [],
             "uco-core:name": null,
             "uco-core:objectCreatedTime": null,
-            "uco-core:objectMarking": null,
+            "uco-core:objectMarking": [],
             "uco-core:specVersion": null,
-            "uco-core:tag": null,
-            "uco-core:type": null,
+            "uco-core:tag": [],
             "uco-observable:hasChanged": null,
             "uco-observable:state": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

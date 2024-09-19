@@ -1,21 +1,18 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:windowspesection1",
+            "@id": "kb:WindowsPESection-1",
             "@type": "uco-observable:WindowsPESection",
             "uco-core:name": null,
             "uco-observable:entropy": null,
-            "uco-observable:hashes": null,
+            "uco-observable:hashes": [],
             "uco-observable:size": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

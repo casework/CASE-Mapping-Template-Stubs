@@ -1,24 +1,21 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:networkconnectionfacet1",
+            "@id": "kb:NetworkConnectionFacet-1",
             "@type": "uco-observable:NetworkConnectionFacet",
             "uco-observable:destinationPort": null,
-            "uco-observable:dst": null,
+            "uco-observable:dst": [],
             "uco-observable:endTime": null,
             "uco-observable:isActive": null,
             "uco-observable:protocols": null,
             "uco-observable:sourcePort": null,
-            "uco-observable:src": null,
+            "uco-observable:src": [],
             "uco-observable:startTime": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

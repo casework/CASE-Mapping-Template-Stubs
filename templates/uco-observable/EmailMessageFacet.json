@@ -1,19 +1,20 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:emailmessagefacet1",
+            "@id": "kb:EmailMessageFacet-1",
             "@type": "uco-observable:EmailMessageFacet",
             "uco-observable:application": null,
-            "uco-observable:bcc": null,
+            "uco-observable:bcc": [],
             "uco-observable:body": null,
-            "uco-observable:bodyMultipart": null,
+            "uco-observable:bodyMultipart": [],
             "uco-observable:bodyRaw": null,
-            "uco-observable:categories": null,
-            "uco-observable:cc": null,
+            "uco-observable:categories": [],
+            "uco-observable:cc": [],
             "uco-observable:contentDisposition": null,
             "uco-observable:contentType": null,
             "uco-observable:from": null,
@@ -22,24 +23,20 @@
             "uco-observable:isMimeEncoded": null,
             "uco-observable:isMultipart": null,
             "uco-observable:isRead": null,
-            "uco-observable:labels": null,
+            "uco-observable:labels": [],
             "uco-observable:messageID": null,
             "uco-observable:modifiedTime": null,
             "uco-observable:otherHeaders": null,
             "uco-observable:priority": null,
-            "uco-observable:receivedLines": null,
+            "uco-observable:receivedLines": [],
             "uco-observable:receivedTime": null,
-            "uco-observable:references": null,
+            "uco-observable:references": [],
             "uco-observable:sender": null,
             "uco-observable:sentTime": null,
             "uco-observable:subject": null,
-            "uco-observable:to": null,
+            "uco-observable:to": [],
             "uco-observable:xMailer": null,
             "uco-observable:xOriginatingIP": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

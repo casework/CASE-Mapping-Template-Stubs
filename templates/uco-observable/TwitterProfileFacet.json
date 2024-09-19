@@ -1,21 +1,22 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:twitterprofilefacet1",
+            "@id": "kb:TwitterProfileFacet-1",
             "@type": "uco-observable:TwitterProfileFacet",
             "uco-observable:favoritesCount": null,
             "uco-observable:followersCount": null,
             "uco-observable:friendsCount": null,
             "uco-observable:listedCount": null,
-            "uco-observable:profileBackgroundHash": null,
+            "uco-observable:profileBackgroundHash": [],
             "uco-observable:profileBackgroundLocation": null,
-            "uco-observable:profileBannerHash": null,
+            "uco-observable:profileBannerHash": [],
             "uco-observable:profileBannerLocation": null,
-            "uco-observable:profileImageHash": null,
+            "uco-observable:profileImageHash": [],
             "uco-observable:profileImageLocation": null,
             "uco-observable:profileIsProtected": null,
             "uco-observable:profileIsVerified": null,
@@ -24,9 +25,5 @@
             "uco-observable:twitterId": null,
             "uco-observable:userLocationString": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

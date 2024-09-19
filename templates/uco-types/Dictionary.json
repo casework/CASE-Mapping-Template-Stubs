@@ -1,17 +1,14 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types#"
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:dictionary1",
+            "@id": "kb:Dictionary-1",
             "@type": "uco-types:Dictionary",
-            "uco-types:entry": null
+            "uco-types:entry": []
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

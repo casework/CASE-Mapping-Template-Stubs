@@ -1,16 +1,13 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity#"
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:eventsfacet1",
+            "@id": "kb:EventsFacet-1",
             "@type": "uco-identity:EventsFacet"
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

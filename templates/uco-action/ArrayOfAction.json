@@ -1,17 +1,14 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action#"
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:arrayofaction1",
+            "@id": "kb:ArrayOfAction-1",
             "@type": "uco-action:ArrayOfAction",
-            "uco-action:action": null
+            "uco-action:action": []
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

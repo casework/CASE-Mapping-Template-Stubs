@@ -1,0 +1,15 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-analysis": "https://ontology.unifiedcyberontology.org/uco/analysis/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:ArtifactClassification-1",
+            "@type": "uco-analysis:ArtifactClassification",
+            "uco-analysis:class": [],
+            "uco-analysis:classificationConfidence": null
+        }
+    ]
+}

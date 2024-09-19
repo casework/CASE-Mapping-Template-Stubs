@@ -1,19 +1,16 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location#"
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:latlongcoordinatesfacet1",
+            "@id": "kb:LatLongCoordinatesFacet-1",
             "@type": "uco-location:LatLongCoordinatesFacet",
             "uco-location:altitude": null,
             "uco-location:latitude": null,
             "uco-location:longitude": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

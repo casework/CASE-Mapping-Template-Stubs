@@ -1,11 +1,12 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:diskpartitionfacet1",
+            "@id": "kb:DiskPartitionFacet-1",
             "@type": "uco-observable:DiskPartitionFacet",
             "uco-observable:diskPartitionType": null,
             "uco-observable:mountPoint": null,
@@ -17,9 +18,5 @@
             "uco-observable:spaceUsed": null,
             "uco-observable:totalSpace": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

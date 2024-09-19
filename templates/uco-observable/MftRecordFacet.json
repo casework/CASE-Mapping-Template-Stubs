@@ -1,11 +1,12 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:mftrecordfacet1",
+            "@id": "kb:MftRecordFacet-1",
             "@type": "uco-observable:MftRecordFacet",
             "uco-observable:mftFileID": null,
             "uco-observable:mftFileNameAccessedTime": null,
@@ -20,9 +21,5 @@
             "uco-observable:ntfsOwnerID": null,
             "uco-observable:ntfsOwnerSID": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

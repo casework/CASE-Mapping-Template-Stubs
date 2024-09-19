@@ -1,23 +1,20 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:browserbookmarkfacet1",
+            "@id": "kb:BrowserBookmarkFacet-1",
             "@type": "uco-observable:BrowserBookmarkFacet",
             "uco-observable:accessedTime": null,
             "uco-observable:application": null,
             "uco-observable:bookmarkPath": null,
             "uco-observable:modifiedTime": null,
             "uco-observable:observableCreatedTime": null,
-            "uco-observable:urlTargeted": null,
+            "uco-observable:urlTargeted": [],
             "uco-observable:visitCount": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

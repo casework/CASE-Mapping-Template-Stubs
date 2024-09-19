@@ -1,19 +1,16 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:externalreference1",
+            "@id": "kb:ExternalReference-1",
             "@type": "uco-core:ExternalReference",
             "uco-core:definingContext": null,
             "uco-core:externalIdentifier": null,
             "uco-core:referenceURL": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

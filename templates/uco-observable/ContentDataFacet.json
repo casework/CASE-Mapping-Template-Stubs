@@ -1,26 +1,23 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:contentdatafacet1",
+            "@id": "kb:ContentDataFacet-1",
             "@type": "uco-observable:ContentDataFacet",
             "uco-observable:byteOrder": null,
             "uco-observable:dataPayload": null,
             "uco-observable:dataPayloadReferenceURL": null,
             "uco-observable:entropy": null,
-            "uco-observable:hash": null,
+            "uco-observable:hash": [],
             "uco-observable:isEncrypted": null,
             "uco-observable:magicNumber": null,
             "uco-observable:mimeClass": null,
-            "uco-observable:mimeType": null,
+            "uco-observable:mimeType": [],
             "uco-observable:sizeInBytes": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

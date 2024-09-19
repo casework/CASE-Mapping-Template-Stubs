@@ -1,11 +1,12 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:simcardfacet1",
+            "@id": "kb:SIMCardFacet-1",
             "@type": "uco-observable:SIMCardFacet",
             "uco-observable:ICCID": null,
             "uco-observable:IMSI": null,
@@ -16,9 +17,5 @@
             "uco-observable:carrier": null,
             "uco-observable:storageCapacityInBytes": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

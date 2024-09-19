@@ -1,12 +1,13 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:profilefacet1",
+            "@id": "kb:ProfileFacet-1",
             "@type": "uco-observable:ProfileFacet",
             "uco-core:name": null,
             "uco-observable:contactAddress": null,
@@ -18,13 +19,9 @@
             "uco-observable:profileAccount": null,
             "uco-observable:profileCreated": null,
             "uco-observable:profileIdentity": null,
-            "uco-observable:profileLanguage": null,
+            "uco-observable:profileLanguage": [],
             "uco-observable:profileService": null,
             "uco-observable:profileWebsite": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

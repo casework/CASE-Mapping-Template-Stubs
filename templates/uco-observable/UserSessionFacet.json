@@ -1,11 +1,12 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:usersessionfacet1",
+            "@id": "kb:UserSessionFacet-1",
             "@type": "uco-observable:UserSessionFacet",
             "uco-observable:effectiveGroup": null,
             "uco-observable:effectiveGroupID": null,
@@ -13,9 +14,5 @@
             "uco-observable:loginTime": null,
             "uco-observable:logoutTime": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

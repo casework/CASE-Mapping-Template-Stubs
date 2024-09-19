@@ -1,20 +1,17 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action#"
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:actionestimationfacet1",
+            "@id": "kb:ActionEstimationFacet-1",
             "@type": "uco-action:ActionEstimationFacet",
             "uco-action:estimatedCost": null,
             "uco-action:estimatedEfficacy": null,
             "uco-action:estimatedImpact": null,
             "uco-action:objective": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

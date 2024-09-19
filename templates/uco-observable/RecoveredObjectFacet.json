@@ -1,0 +1,16 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:RecoveredObjectFacet-1",
+            "@type": "uco-observable:RecoveredObjectFacet",
+            "uco-observable:contentRecoveredStatus": null,
+            "uco-observable:metadataRecoveredStatus": null,
+            "uco-observable:nameRecoveredStatus": null
+        }
+    ]
+}

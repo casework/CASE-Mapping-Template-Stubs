@@ -1,28 +1,25 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:windowspebinaryfilefacet1",
+            "@id": "kb:WindowsPEBinaryFileFacet-1",
             "@type": "uco-observable:WindowsPEBinaryFileFacet",
-            "uco-observable:characteristics": null,
-            "uco-observable:fileHeaderHashes": null,
+            "uco-observable:characteristics": [],
+            "uco-observable:fileHeaderHashes": [],
             "uco-observable:impHash": null,
-            "uco-observable:machine": null,
+            "uco-observable:machine": [],
             "uco-observable:numberOfSections": null,
             "uco-observable:numberOfSymbols": null,
             "uco-observable:optionalHeader": null,
             "uco-observable:peType": null,
-            "uco-observable:pointerToSymbolTable": null,
-            "uco-observable:sections": null,
+            "uco-observable:pointerToSymbolTable": [],
+            "uco-observable:sections": [],
             "uco-observable:sizeOfOptionalHeader": null,
             "uco-observable:timeDateStamp": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }
