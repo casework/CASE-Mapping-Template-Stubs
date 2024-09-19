@@ -19,8 +19,7 @@ SHELL := /bin/bash
 PYTHON3 ?= python3
 
 py_srcfiles := \
-  src/facet_cardinalities_ttl.py \
-  src/generate_single_stub_json.py
+  $(wildcard src/*.py)
 
 all: \
   .venv-pre-commit/var/.pre-commit-built.log \
