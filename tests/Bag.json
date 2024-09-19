@@ -1,0 +1,16 @@
+{
+    "@context": {
+        "co": "http://purl.org/co/",
+        "kb": "http://example.org/kb/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:Bag-1",
+            "@type": "co:Bag",
+            "co:element": [],
+            "co:item": [],
+            "co:size": null
+        }
+    ]
+}
