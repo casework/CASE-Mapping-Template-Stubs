@@ -18,7 +18,7 @@ import argparse
 import importlib.resources
 import json
 import logging
-from typing import Dict, List, Optional, Set
+from typing import Dict, List, Optional, Set, Union
 
 import case_utils.ontology
 import pyld  # type: ignore
@@ -48,7 +48,8 @@ from rdflib.query import ResultRow
 
 # JSON type via:
 # https://github.com/python/typing/issues/182#issuecomment-1320974824
-JSON = Dict[str, "JSON"] | List["JSON"] | str | int | float | bool | None
+# Union is needed instead of '|' operator before Python 3.10.
+JSON = Union[Dict[str, "JSON"], List["JSON"], str, int, float, bool, None]
 
 NS_KB = Namespace("http://example.org/kb/")
 
