@@ -1,18 +1,18 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:contactsip1",
-      "@type": "uco-observable:ContactSIP",
-      "uco-observable:sipAddress": null,
-      "uco-observable:contactSIPScope": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:contactsip1",
+            "@type": "uco-observable:ContactSIP",
+            "uco-observable:contactSIPScope": null,
+            "uco-observable:sipAddress": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

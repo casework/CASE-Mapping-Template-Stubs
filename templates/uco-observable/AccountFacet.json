@@ -1,24 +1,24 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:accountfacet1",
-      "@type": "uco-observable:AccountFacet",
-      "uco-observable:accountIssuer": null,
-      "uco-observable:owner": null,
-      "uco-observable:isActive": null,
-      "uco-observable:expirationTime": null,
-      "uco-observable:modifiedTime": null,
-      "uco-observable:observableCreatedTime": null,
-      "uco-observable:accountIdentifier": null,
-      "uco-observable:accountType": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:accountfacet1",
+            "@type": "uco-observable:AccountFacet",
+            "uco-observable:accountIdentifier": null,
+            "uco-observable:accountIssuer": null,
+            "uco-observable:accountType": null,
+            "uco-observable:expirationTime": null,
+            "uco-observable:isActive": null,
+            "uco-observable:modifiedTime": null,
+            "uco-observable:observableCreatedTime": null,
+            "uco-observable:owner": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

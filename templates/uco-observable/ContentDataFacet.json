@@ -1,26 +1,26 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:contentdatafacet1",
-      "@type": "uco-observable:ContentDataFacet",
-      "uco-observable:dataPayloadReferenceURL": null,
-      "uco-observable:hash": null,
-      "uco-observable:isEncrypted": null,
-      "uco-observable:entropy": null,
-      "uco-observable:sizeInBytes": null,
-      "uco-observable:dataPayload": null,
-      "uco-observable:magicNumber": null,
-      "uco-observable:mimeClass": null,
-      "uco-observable:mimeType": null,
-      "uco-observable:byteOrder": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:contentdatafacet1",
+            "@type": "uco-observable:ContentDataFacet",
+            "uco-observable:byteOrder": null,
+            "uco-observable:dataPayload": null,
+            "uco-observable:dataPayloadReferenceURL": null,
+            "uco-observable:entropy": null,
+            "uco-observable:hash": null,
+            "uco-observable:isEncrypted": null,
+            "uco-observable:magicNumber": null,
+            "uco-observable:mimeClass": null,
+            "uco-observable:mimeType": null,
+            "uco-observable:sizeInBytes": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

@@ -1,32 +1,32 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:twitterprofilefacet1",
-      "@type": "uco-observable:TwitterProfileFacet",
-      "uco-observable:profileBackgroundLocation": null,
-      "uco-observable:profileBannerLocation": null,
-      "uco-observable:profileImageLocation": null,
-      "uco-observable:profileBackgroundHash": null,
-      "uco-observable:profileBannerHash": null,
-      "uco-observable:profileImageHash": null,
-      "uco-observable:profileIsProtected": null,
-      "uco-observable:profileIsVerified": null,
-      "uco-observable:listedCount": null,
-      "uco-observable:favoritesCount": null,
-      "uco-observable:followersCount": null,
-      "uco-observable:friendsCount": null,
-      "uco-observable:statusesCount": null,
-      "uco-observable:twitterId": null,
-      "uco-observable:twitterHandle": null,
-      "uco-observable:userLocationString": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:twitterprofilefacet1",
+            "@type": "uco-observable:TwitterProfileFacet",
+            "uco-observable:favoritesCount": null,
+            "uco-observable:followersCount": null,
+            "uco-observable:friendsCount": null,
+            "uco-observable:listedCount": null,
+            "uco-observable:profileBackgroundHash": null,
+            "uco-observable:profileBackgroundLocation": null,
+            "uco-observable:profileBannerHash": null,
+            "uco-observable:profileBannerLocation": null,
+            "uco-observable:profileImageHash": null,
+            "uco-observable:profileImageLocation": null,
+            "uco-observable:profileIsProtected": null,
+            "uco-observable:profileIsVerified": null,
+            "uco-observable:statusesCount": null,
+            "uco-observable:twitterHandle": null,
+            "uco-observable:twitterId": null,
+            "uco-observable:userLocationString": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

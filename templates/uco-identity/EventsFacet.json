@@ -1,16 +1,16 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:eventsfacet1",
-      "@type": "uco-identity:EventsFacet"
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:eventsfacet1",
+            "@type": "uco-identity:EventsFacet"
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

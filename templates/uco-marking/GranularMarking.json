@@ -1,18 +1,18 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-marking": "https://ontology.unifiedcyberontology.org/uco/marking#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:granularmarking1",
-      "@type": "uco-marking:GranularMarking",
-      "uco-marking:marking": null,
-      "uco-marking:contentSelectors": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-marking": "https://ontology.unifiedcyberontology.org/uco/marking#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:granularmarking1",
+            "@type": "uco-marking:GranularMarking",
+            "uco-marking:contentSelectors": null,
+            "uco-marking:marking": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

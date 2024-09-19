@@ -1,24 +1,24 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:messagefacet1",
-      "@type": "uco-observable:MessageFacet",
-      "uco-observable:application": null,
-      "uco-observable:from": null,
-      "uco-observable:to": null,
-      "uco-observable:sentTime": null,
-      "uco-observable:messageID": null,
-      "uco-observable:messageText": null,
-      "uco-observable:messageType": null,
-      "uco-observable:sessionID": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:messagefacet1",
+            "@type": "uco-observable:MessageFacet",
+            "uco-observable:application": null,
+            "uco-observable:from": null,
+            "uco-observable:messageID": null,
+            "uco-observable:messageText": null,
+            "uco-observable:messageType": null,
+            "uco-observable:sentTime": null,
+            "uco-observable:sessionID": null,
+            "uco-observable:to": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

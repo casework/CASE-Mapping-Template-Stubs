@@ -1,25 +1,25 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:urlfacet1",
-      "@type": "uco-observable:URLFacet",
-      "uco-observable:host": null,
-      "uco-observable:port": null,
-      "uco-observable:fullValue": null,
-      "uco-observable:fragment": null,
-      "uco-observable:password": null,
-      "uco-observable:path": null,
-      "uco-observable:query": null,
-      "uco-observable:scheme": null,
-      "uco-observable:userName": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:urlfacet1",
+            "@type": "uco-observable:URLFacet",
+            "uco-observable:fragment": null,
+            "uco-observable:fullValue": null,
+            "uco-observable:host": null,
+            "uco-observable:password": null,
+            "uco-observable:path": null,
+            "uco-observable:port": null,
+            "uco-observable:query": null,
+            "uco-observable:scheme": null,
+            "uco-observable:userName": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

@@ -1,17 +1,17 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:addressfacet1",
-      "@type": "uco-identity:AddressFacet",
-      "uco-identity:address": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:addressfacet1",
+            "@type": "uco-identity:AddressFacet",
+            "uco-identity:address": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

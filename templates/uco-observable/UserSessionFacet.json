@@ -1,21 +1,21 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:usersessionfacet1",
-      "@type": "uco-observable:UserSessionFacet",
-      "uco-observable:effectiveUser": null,
-      "uco-observable:loginTime": null,
-      "uco-observable:logoutTime": null,
-      "uco-observable:effectiveGroup": null,
-      "uco-observable:effectiveGroupID": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:usersessionfacet1",
+            "@type": "uco-observable:UserSessionFacet",
+            "uco-observable:effectiveGroup": null,
+            "uco-observable:effectiveGroupID": null,
+            "uco-observable:effectiveUser": null,
+            "uco-observable:loginTime": null,
+            "uco-observable:logoutTime": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

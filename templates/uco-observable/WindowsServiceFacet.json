@@ -1,24 +1,24 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:windowsservicefacet1",
-      "@type": "uco-observable:WindowsServiceFacet",
-      "uco-observable:serviceName": null,
-      "uco-observable:displayName": null,
-      "uco-observable:groupName": null,
-      "uco-observable:serviceStatus": null,
-      "uco-observable:serviceType": null,
-      "uco-observable:startCommandLine": null,
-      "uco-observable:startType": null,
-      "uco-observable:descriptions": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:windowsservicefacet1",
+            "@type": "uco-observable:WindowsServiceFacet",
+            "uco-observable:descriptions": null,
+            "uco-observable:displayName": null,
+            "uco-observable:groupName": null,
+            "uco-observable:serviceName": null,
+            "uco-observable:serviceStatus": null,
+            "uco-observable:serviceType": null,
+            "uco-observable:startCommandLine": null,
+            "uco-observable:startType": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

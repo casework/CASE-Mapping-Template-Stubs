@@ -1,36 +1,36 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:windowstaskfacet1",
-      "@type": "uco-observable:WindowsTaskFacet",
-      "uco-observable:account": null,
-      "uco-observable:application": null,
-      "uco-observable:workItemData": null,
-      "uco-observable:workingDirectory": null,
-      "uco-observable:actionList": null,
-      "uco-observable:triggerList": null,
-      "uco-observable:mostRecentRunTime": null,
-      "uco-observable:nextRunTime": null,
-      "uco-observable:observableCreatedTime": null,
-      "uco-observable:exitCode": null,
-      "uco-observable:maxRunTime": null,
-      "uco-observable:accountLogonType": null,
-      "uco-observable:accountRunLevel": null,
-      "uco-observable:imageName": null,
-      "uco-observable:parameters": null,
-      "uco-observable:taskComment": null,
-      "uco-observable:taskCreator": null,
-      "uco-observable:flags": null,
-      "uco-observable:priority": null,
-      "uco-observable:status": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:windowstaskfacet1",
+            "@type": "uco-observable:WindowsTaskFacet",
+            "uco-observable:account": null,
+            "uco-observable:accountLogonType": null,
+            "uco-observable:accountRunLevel": null,
+            "uco-observable:actionList": null,
+            "uco-observable:application": null,
+            "uco-observable:exitCode": null,
+            "uco-observable:flags": null,
+            "uco-observable:imageName": null,
+            "uco-observable:maxRunTime": null,
+            "uco-observable:mostRecentRunTime": null,
+            "uco-observable:nextRunTime": null,
+            "uco-observable:observableCreatedTime": null,
+            "uco-observable:parameters": null,
+            "uco-observable:priority": null,
+            "uco-observable:status": null,
+            "uco-observable:taskComment": null,
+            "uco-observable:taskCreator": null,
+            "uco-observable:triggerList": null,
+            "uco-observable:workItemData": null,
+            "uco-observable:workingDirectory": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

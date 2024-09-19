@@ -1,30 +1,30 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#",
-    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:profilefacet1",
-      "@type": "uco-observable:ProfileFacet",
-      "uco-observable:profileIdentity": null,
-      "uco-observable:contactAddress": null,
-      "uco-observable:contactEmail": null,
-      "uco-observable:contactMessaging": null,
-      "uco-observable:contactPhone": null,
-      "uco-observable:contactURL": null,
-      "uco-observable:profileAccount": null,
-      "uco-observable:profileService": null,
-      "uco-observable:profileWebsite": null,
-      "uco-observable:profileCreated": null,
-      "uco-core:name": null,
-      "uco-observable:displayName": null,
-      "uco-observable:profileLanguage": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:profilefacet1",
+            "@type": "uco-observable:ProfileFacet",
+            "uco-core:name": null,
+            "uco-observable:contactAddress": null,
+            "uco-observable:contactEmail": null,
+            "uco-observable:contactMessaging": null,
+            "uco-observable:contactPhone": null,
+            "uco-observable:contactURL": null,
+            "uco-observable:displayName": null,
+            "uco-observable:profileAccount": null,
+            "uco-observable:profileCreated": null,
+            "uco-observable:profileIdentity": null,
+            "uco-observable:profileLanguage": null,
+            "uco-observable:profileService": null,
+            "uco-observable:profileWebsite": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

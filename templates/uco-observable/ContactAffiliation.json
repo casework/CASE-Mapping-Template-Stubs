@@ -1,25 +1,25 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:contactaffiliation1",
-      "@type": "uco-observable:ContactAffiliation",
-      "uco-observable:contactOrganization": null,
-      "uco-observable:organizationLocation": null,
-      "uco-observable:contactEmail": null,
-      "uco-observable:contactMessaging": null,
-      "uco-observable:contactPhone": null,
-      "uco-observable:contactProfile": null,
-      "uco-observable:contactURL": null,
-      "uco-observable:organizationDepartment": null,
-      "uco-observable:organizationPosition": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:contactaffiliation1",
+            "@type": "uco-observable:ContactAffiliation",
+            "uco-observable:contactEmail": null,
+            "uco-observable:contactMessaging": null,
+            "uco-observable:contactOrganization": null,
+            "uco-observable:contactPhone": null,
+            "uco-observable:contactProfile": null,
+            "uco-observable:contactURL": null,
+            "uco-observable:organizationDepartment": null,
+            "uco-observable:organizationLocation": null,
+            "uco-observable:organizationPosition": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

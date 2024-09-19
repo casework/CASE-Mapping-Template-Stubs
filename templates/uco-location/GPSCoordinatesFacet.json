@@ -1,20 +1,20 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-location": "https://ontology.unifiedcyberontology.org/uco/location#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:gpscoordinatesfacet1",
-      "@type": "uco-location:GPSCoordinatesFacet",
-      "uco-location:hdop": null,
-      "uco-location:pdop": null,
-      "uco-location:tdop": null,
-      "uco-location:vdop": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:gpscoordinatesfacet1",
+            "@type": "uco-location:GPSCoordinatesFacet",
+            "uco-location:hdop": null,
+            "uco-location:pdop": null,
+            "uco-location:tdop": null,
+            "uco-location:vdop": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

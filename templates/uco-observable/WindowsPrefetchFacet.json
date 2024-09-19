@@ -1,24 +1,24 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:windowsprefetchfacet1",
-      "@type": "uco-observable:WindowsPrefetchFacet",
-      "uco-observable:volume": null,
-      "uco-observable:accessedDirectory": null,
-      "uco-observable:accessedFile": null,
-      "uco-observable:firstRun": null,
-      "uco-observable:lastRun": null,
-      "uco-observable:timesExecuted": null,
-      "uco-observable:applicationFileName": null,
-      "uco-observable:prefetchHash": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:windowsprefetchfacet1",
+            "@type": "uco-observable:WindowsPrefetchFacet",
+            "uco-observable:accessedDirectory": null,
+            "uco-observable:accessedFile": null,
+            "uco-observable:applicationFileName": null,
+            "uco-observable:firstRun": null,
+            "uco-observable:lastRun": null,
+            "uco-observable:prefetchHash": null,
+            "uco-observable:timesExecuted": null,
+            "uco-observable:volume": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

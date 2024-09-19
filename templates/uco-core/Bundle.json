@@ -1,29 +1,29 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:bundle1",
-      "@type": "uco-core:Bundle",
-      "uco-core:object": null,
-      "uco-core:externalReference": null,
-      "uco-core:hasFacet": null,
-      "uco-core:createdBy": null,
-      "uco-core:objectMarking": null,
-      "uco-core:objectCreatedTime": null,
-      "uco-core:modifiedTime": null,
-      "uco-core:name": null,
-      "uco-core:specVersion": null,
-      "uco-core:description": null,
-      "uco-core:tag": null,
-      "uco-core:type": null,
-      "uco-core:id": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:bundle1",
+            "@type": "uco-core:Bundle",
+            "uco-core:createdBy": null,
+            "uco-core:description": null,
+            "uco-core:externalReference": null,
+            "uco-core:hasFacet": null,
+            "uco-core:id": null,
+            "uco-core:modifiedTime": null,
+            "uco-core:name": null,
+            "uco-core:object": null,
+            "uco-core:objectCreatedTime": null,
+            "uco-core:objectMarking": null,
+            "uco-core:specVersion": null,
+            "uco-core:tag": null,
+            "uco-core:type": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

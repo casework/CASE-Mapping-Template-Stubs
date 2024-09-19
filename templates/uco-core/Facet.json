@@ -1,16 +1,16 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:facet1",
-      "@type": "uco-core:Facet"
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:facet1",
+            "@type": "uco-core:Facet"
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }

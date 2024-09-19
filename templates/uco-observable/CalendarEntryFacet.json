@@ -1,31 +1,31 @@
 {
-  "@context": {
-    "kb": "http://example.org/kb/",
-    "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:calendarentryfacet1",
-      "@type": "uco-observable:CalendarEntryFacet",
-      "uco-observable:owner": null,
-      "uco-observable:attendant": null,
-      "uco-observable:location": null,
-      "uco-observable:application": null,
-      "uco-observable:isPrivate": null,
-      "uco-observable:endTime": null,
-      "uco-observable:modifiedTime": null,
-      "uco-observable:observableCreatedTime": null,
-      "uco-observable:remindTime": null,
-      "uco-observable:startTime": null,
-      "uco-observable:duration": null,
-      "uco-observable:eventStatus": null,
-      "uco-observable:eventType": null,
-      "uco-observable:recurrence": null,
-      "uco-observable:subject": null
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:calendarentryfacet1",
+            "@type": "uco-observable:CalendarEntryFacet",
+            "uco-observable:application": null,
+            "uco-observable:attendant": null,
+            "uco-observable:duration": null,
+            "uco-observable:endTime": null,
+            "uco-observable:eventStatus": null,
+            "uco-observable:eventType": null,
+            "uco-observable:isPrivate": null,
+            "uco-observable:location": null,
+            "uco-observable:modifiedTime": null,
+            "uco-observable:observableCreatedTime": null,
+            "uco-observable:owner": null,
+            "uco-observable:recurrence": null,
+            "uco-observable:remindTime": null,
+            "uco-observable:startTime": null,
+            "uco-observable:subject": null
+        }
+    ],
+    "@version": {
+        "case_util": "0.6.0",
+        "ontology_version": "0.7.0"
     }
-  ],
-  "@version": {
-    "case_util": "0.6.0",
-    "ontology_version": "0.7.0"
-  }
 }
