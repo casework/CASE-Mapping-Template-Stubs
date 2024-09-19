@@ -20,7 +20,8 @@ top_srcdir := ..
 
 all: \
   InvestigativeAction.json \
-  ArchiveFile.json
+  ArchiveFile.json \
+  Bag.json
 
 ArchiveFile.json: \
   $(top_srcdir)/.venv.done.log \
@@ -32,6 +33,23 @@ ArchiveFile.json: \
 	    --debug \
 	    __$@ \
 	    https://ontology.unifiedcyberontology.org/uco/observable/ArchiveFile \
+	    $(top_srcdir)/var/facet_cardinalities.ttl
+	python3 -m json.tool \
+	  __$@ \
+	  _$@
+	rm __$@
+	mv _$@ $@
+
+Bag.json: \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/src/generate_single_stub_json.py \
+  $(top_srcdir)/var/facet_cardinalities.ttl
+	rm -f __$@ _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && python $(top_srcdir)/src/generate_single_stub_json.py \
+	    --debug \
+	    __$@ \
+	    http://purl.org/co/Bag \
 	    $(top_srcdir)/var/facet_cardinalities.ttl
 	python3 -m json.tool \
 	  __$@ \
