@@ -19,12 +19,17 @@ SHELL := /bin/bash
 PYTHON3 ?= python3
 
 py_srcfiles := \
-  generate.py
+  src/facet_cardinalities_ttl.py \
+  src/generate_single_stub_json.py
 
 all: \
-  .venv-pre-commit/var/.pre-commit-built.log
+  .venv-pre-commit/var/.pre-commit-built.log \
+  all-tests
 
 .PHONY: \
+  all-tests \
+  all-var \
+  check-pytest \
   check-supply-chain \
   check-supply-chain-pre-commit
 
@@ -35,6 +40,20 @@ all: \
 	  && mypy \
 	    --strict \
 	    $(py_srcfiles)
+	touch $@
+
+.venv.done.log: \
+  requirements.txt
+	rm -rf venv
+	$(PYTHON3) -m venv \
+	  venv
+	source venv/bin/activate \
+	  && pip install \
+	    --upgrade \
+	    pip
+	source venv/bin/activate \
+	  && pip install \
+	    --requirement requirements.txt
 	touch $@
 
 # This virtual environment is meant to be built once and then persist, even through 'make clean'.
@@ -60,11 +79,32 @@ all: \
 	  .venv-pre-commit/var
 	touch $@
 
+all-tests: \
+  all-var
+	$(MAKE) \
+	  --directory tests
+
+all-var: \
+  .mypy.done.log
+	$(MAKE) \
+	  --directory var
+
 check: \
-  .venv-pre-commit/var/.pre-commit-built.log
+  .venv-pre-commit/var/.pre-commit-built.log \
+  check-pytest \
+  all-tests
+
+check-pytest: \
+  .venv.done.log
+	source venv/bin/activate \
+	  && pytest \
+	    --doctest-modules \
+	    --log-level=DEBUG \
+	    $(py_srcfiles)
 
 check-supply-chain: \
-  check-supply-chain-pre-commit
+  check-supply-chain-pre-commit \
+ .mypy.done.log
 
 # Update pre-commit configuration and use the updated config file to
 # review code.  Only have Make exit if 'pre-commit run' modifies files.
