@@ -479,8 +479,17 @@ def main() -> None:
     compacted_graph = pyld.jsonld.compact(expanded_stub, context)
     swap_values(compacted_graph, 9, None)
 
+    # Guarantee "@graph" key is used and list-valued.
+    if "@graph" not in compacted_graph.keys():
+        new_graph: Dict[str, JSON] = dict()
+        new_graph["@context"] = compacted_graph["@context"]
+        del compacted_graph["@context"]
+        new_graph["@graph"] = [compacted_graph]
+        compacted_graph = new_graph
+
     with open(args.out_json, "w") as out_fh:
         json.dump(compacted_graph, out_fh, indent=4, sort_keys=True)
+        out_fh.write("\n")
 
 
 if __name__ == "__main__":
