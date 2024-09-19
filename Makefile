@@ -103,7 +103,8 @@ check-pytest: \
 	    $(py_srcfiles)
 
 check-supply-chain: \
-  check-supply-chain-pre-commit
+  check-supply-chain-pre-commit \
+ .mypy.done.log
 
 # Update pre-commit configuration and use the updated config file to
 # review code.  Only have Make exit if 'pre-commit run' modifies files.
