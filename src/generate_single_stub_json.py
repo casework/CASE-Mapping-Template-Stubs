@@ -120,6 +120,18 @@ ex:C\
     ;\
   .\
 \
+ex:D\
+  a owl:Class ;\
+  rdfs:subClassOf\
+    ex:B ,\
+    [\
+      a owl:Restriction ;\
+      owl:onProperty ex:foo ;\
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;\
+    ]\
+    ;\
+  .\
+\
 ex:foo\
   a owl:AnnotationProperty ;\
   .\
@@ -132,6 +144,8 @@ ex:foo\
     3
     >>> resolve_max_cardinality(g, ns_ex["C"], ns_ex["foo"])
     2
+    >>> resolve_max_cardinality(g, ns_ex["D"], ns_ex["foo"])
+    1
     """
     max_counts: Set[int] = set()
     query = """\
@@ -151,8 +165,18 @@ WHERE {
     ?nRestriction
       a owl:Restriction ;
       owl:onProperty ?nProperty ;
-      owl:maxCardinality ?lMaxCount ;
       .
+    {
+      ?nRestriction
+        owl:cardinality ?lMaxCount ;
+        .
+    }
+    UNION
+    {
+      ?nRestriction
+        owl:maxCardinality ?lMaxCount ;
+        .
+    }
   }
 }
 """
