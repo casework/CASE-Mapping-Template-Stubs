@@ -1,0 +1,19 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:AntennaFacet-1",
+            "@type": "uco-observable:AntennaFacet",
+            "uco-observable:antennaHeight": null,
+            "uco-observable:azimuth": null,
+            "uco-observable:elevation": null,
+            "uco-observable:horizontalBeamWidth": null,
+            "uco-observable:signalStrength": null,
+            "uco-observable:skew": null
+        }
+    ]
+}

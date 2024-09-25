@@ -1,18 +1,15 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:volumefacet1",
+            "@id": "kb:VolumeFacet-1",
             "@type": "uco-observable:VolumeFacet",
             "uco-observable:sectorSize": null,
             "uco-observable:volumeID": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

@@ -1,18 +1,15 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool#"
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:librarytype1",
+            "@id": "kb:LibraryType-1",
             "@type": "uco-tool:LibraryType",
             "uco-tool:libraryName": null,
             "uco-tool:libraryVersion": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

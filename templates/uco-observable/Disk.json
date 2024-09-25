@@ -1,31 +1,35 @@
 {
     "@context": {
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "kb": "http://example.org/kb/",
-        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:disk1",
+            "@id": "kb:Disk-1",
             "@type": "uco-observable:Disk",
+            "case-investigation:wasDerivedFrom": [],
             "uco-core:createdBy": null,
-            "uco-core:description": null,
-            "uco-core:externalReference": null,
-            "uco-core:hasFacet": null,
-            "uco-core:id": null,
-            "uco-core:modifiedTime": null,
+            "uco-core:description": [],
+            "uco-core:externalReference": [],
+            "uco-core:hasFacet": {
+                "@id": "kb:DiskFacet-1",
+                "@type": "uco-observable:DiskFacet",
+                "uco-observable:diskSize": null,
+                "uco-observable:diskType": null,
+                "uco-observable:freeSpace": null,
+                "uco-observable:partition": []
+            },
+            "uco-core:modifiedTime": [],
             "uco-core:name": null,
             "uco-core:objectCreatedTime": null,
-            "uco-core:objectMarking": null,
+            "uco-core:objectMarking": [],
             "uco-core:specVersion": null,
-            "uco-core:tag": null,
-            "uco-core:type": null,
+            "uco-core:tag": [],
             "uco-observable:hasChanged": null,
             "uco-observable:state": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

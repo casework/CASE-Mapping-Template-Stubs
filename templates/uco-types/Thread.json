@@ -1,0 +1,19 @@
+{
+    "@context": {
+        "co": "http://purl.org/co/",
+        "kb": "http://example.org/kb/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:Thread-1",
+            "@type": "uco-types:Thread",
+            "co:element": [],
+            "co:item": [],
+            "co:size": null,
+            "uco-types:threadOriginItem": [],
+            "uco-types:threadTerminalItem": []
+        }
+    ]
+}

@@ -1,17 +1,14 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool#"
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:buildfacet1",
+            "@id": "kb:BuildFacet-1",
             "@type": "uco-tool:BuildFacet",
             "uco-tool:buildInformation": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

@@ -1,26 +1,26 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:windowscomputerspecificationfacet1",
+            "@id": "kb:WindowsComputerSpecificationFacet-1",
             "@type": "uco-observable:WindowsComputerSpecificationFacet",
-            "uco-observable:domain": null,
-            "uco-observable:globalFlagList": null,
+            "uco-observable:domain": [],
+            "uco-observable:globalFlagList": [],
+            "uco-observable:lastShutdownDate": null,
             "uco-observable:msProductID": null,
             "uco-observable:msProductName": null,
             "uco-observable:netBIOSName": null,
+            "uco-observable:osInstallDate": null,
+            "uco-observable:osLastUpgradeDate": null,
             "uco-observable:registeredOrganization": null,
             "uco-observable:registeredOwner": null,
             "uco-observable:windowsDirectory": null,
             "uco-observable:windowsSystemDirectory": null,
             "uco-observable:windowsTempDirectory": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

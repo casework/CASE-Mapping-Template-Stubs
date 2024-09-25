@@ -1,0 +1,16 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:ApplicationVersion-1",
+            "@type": "uco-observable:ApplicationVersion",
+            "uco-observable:installDate": null,
+            "uco-observable:uninstallDate": null,
+            "uco-observable:version": null
+        }
+    ]
+}

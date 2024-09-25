@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:EventRecordFacet-1",
+            "@type": "uco-observable:EventRecordFacet",
+            "uco-observable:account": null,
+            "uco-observable:application": null,
+            "uco-observable:cyberAction": null,
+            "uco-observable:endTime": null,
+            "uco-observable:eventID": null,
+            "uco-observable:eventRecordDevice": null,
+            "uco-observable:eventRecordID": null,
+            "uco-observable:eventRecordRaw": null,
+            "uco-observable:eventRecordServiceName": null,
+            "uco-observable:eventRecordText": null,
+            "uco-observable:eventType": null,
+            "uco-observable:observableCreatedTime": null,
+            "uco-observable:startTime": null
+        }
+    ]
+}

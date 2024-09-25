@@ -1,0 +1,17 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:CapturedTelecommunicationsInformationFacet-1",
+            "@type": "uco-observable:CapturedTelecommunicationsInformationFacet",
+            "uco-observable:captureCellSite": null,
+            "uco-observable:endTime": null,
+            "uco-observable:interceptedCallState": null,
+            "uco-observable:startTime": null
+        }
+    ]
+}

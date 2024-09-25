@@ -1,31 +1,51 @@
 {
     "@context": {
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "kb": "http://example.org/kb/",
-        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:computerspecification1",
+            "@id": "kb:ComputerSpecification-1",
             "@type": "uco-observable:ComputerSpecification",
+            "case-investigation:wasDerivedFrom": [],
             "uco-core:createdBy": null,
-            "uco-core:description": null,
-            "uco-core:externalReference": null,
-            "uco-core:hasFacet": null,
-            "uco-core:id": null,
-            "uco-core:modifiedTime": null,
+            "uco-core:description": [],
+            "uco-core:externalReference": [],
+            "uco-core:hasFacet": {
+                "@id": "kb:ComputerSpecificationFacet-1",
+                "@type": "uco-observable:ComputerSpecificationFacet",
+                "uco-observable:availableRam": null,
+                "uco-observable:biosDate": null,
+                "uco-observable:biosManufacturer": null,
+                "uco-observable:biosReleaseDate": null,
+                "uco-observable:biosSerialNumber": null,
+                "uco-observable:biosVersion": null,
+                "uco-observable:cpu": null,
+                "uco-observable:cpuFamily": null,
+                "uco-observable:currentSystemDate": null,
+                "uco-observable:gpu": null,
+                "uco-observable:gpuFamily": null,
+                "uco-observable:hostname": null,
+                "uco-observable:localTime": null,
+                "uco-observable:networkInterface": [],
+                "uco-observable:processorArchitecture": null,
+                "uco-observable:systemTime": null,
+                "uco-observable:timezoneDST": null,
+                "uco-observable:timezoneStandard": null,
+                "uco-observable:totalRam": null,
+                "uco-observable:uptime": null
+            },
+            "uco-core:modifiedTime": [],
             "uco-core:name": null,
             "uco-core:objectCreatedTime": null,
-            "uco-core:objectMarking": null,
+            "uco-core:objectMarking": [],
             "uco-core:specVersion": null,
-            "uco-core:tag": null,
-            "uco-core:type": null,
+            "uco-core:tag": [],
             "uco-observable:hasChanged": null,
             "uco-observable:state": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

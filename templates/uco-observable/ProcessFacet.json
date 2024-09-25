@@ -1,13 +1,14 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:processfacet1",
+            "@id": "kb:ProcessFacet-1",
             "@type": "uco-observable:ProcessFacet",
-            "uco-observable:arguments": null,
+            "uco-observable:arguments": [],
             "uco-observable:binary": null,
             "uco-observable:creatorUser": null,
             "uco-observable:currentWorkingDirectory": null,
@@ -20,9 +21,5 @@
             "uco-observable:pid": null,
             "uco-observable:status": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

@@ -1,34 +1,31 @@
 {
     "@context": {
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "kb": "http://example.org/kb/",
-        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core#"
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:relationship1",
+            "@id": "kb:Relationship-1",
             "@type": "uco-core:Relationship",
+            "case-investigation:wasDerivedFrom": [],
             "uco-core:createdBy": null,
-            "uco-core:description": null,
-            "uco-core:endTime": null,
-            "uco-core:externalReference": null,
-            "uco-core:hasFacet": null,
-            "uco-core:id": null,
+            "uco-core:description": [],
+            "uco-core:endTime": [],
+            "uco-core:externalReference": [],
+            "uco-core:hasFacet": [],
             "uco-core:isDirectional": null,
             "uco-core:kindOfRelationship": null,
-            "uco-core:modifiedTime": null,
+            "uco-core:modifiedTime": [],
             "uco-core:name": null,
             "uco-core:objectCreatedTime": null,
-            "uco-core:objectMarking": null,
-            "uco-core:source": null,
+            "uco-core:objectMarking": [],
+            "uco-core:source": [],
             "uco-core:specVersion": null,
-            "uco-core:startTime": null,
-            "uco-core:tag": null,
-            "uco-core:target": null,
-            "uco-core:type": null
+            "uco-core:startTime": [],
+            "uco-core:tag": [],
+            "uco-core:target": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

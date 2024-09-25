@@ -1,15 +1,15 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:mobiledevicefacet1",
+            "@id": "kb:MobileDeviceFacet-1",
             "@type": "uco-observable:MobileDeviceFacet",
             "uco-observable:ESN": null,
-            "uco-observable:IMEI": null,
-            "uco-observable:MSISDN": null,
+            "uco-observable:IMEI": [],
             "uco-observable:bluetoothDeviceName": null,
             "uco-observable:clockSetting": null,
             "uco-observable:keypadUnlockCode": null,
@@ -18,9 +18,5 @@
             "uco-observable:phoneActivationTime": null,
             "uco-observable:storageCapacityInBytes": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

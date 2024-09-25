@@ -1,11 +1,12 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool#"
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:buildinformationtype1",
+            "@id": "kb:BuildInformationType-1",
             "@type": "uco-tool:BuildInformationType",
             "uco-tool:buildConfiguration": null,
             "uco-tool:buildID": null,
@@ -16,12 +17,8 @@
             "uco-tool:buildUtility": null,
             "uco-tool:buildVersion": null,
             "uco-tool:compilationDate": null,
-            "uco-tool:compilers": null,
-            "uco-tool:libraries": null
+            "uco-tool:compilers": [],
+            "uco-tool:libraries": []
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

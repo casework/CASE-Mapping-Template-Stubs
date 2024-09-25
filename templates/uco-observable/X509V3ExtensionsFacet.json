@@ -1,11 +1,12 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:x509v3extensionsfacet1",
+            "@id": "kb:X509V3ExtensionsFacet-1",
             "@type": "uco-observable:X509V3ExtensionsFacet",
             "uco-observable:authorityKeyIdentifier": null,
             "uco-observable:basicConstraints": null,
@@ -24,9 +25,5 @@
             "uco-observable:subjectDirectoryAttributes": null,
             "uco-observable:subjectKeyIdentifier": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

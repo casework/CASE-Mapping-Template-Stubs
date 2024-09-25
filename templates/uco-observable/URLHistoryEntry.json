@@ -1,27 +1,24 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:urlhistoryentry1",
+            "@id": "kb:URLHistoryEntry-1",
             "@type": "uco-observable:URLHistoryEntry",
             "uco-observable:browserUserProfile": null,
             "uco-observable:expirationTime": null,
             "uco-observable:firstVisit": null,
             "uco-observable:hostname": null,
-            "uco-observable:keywordSearchTerm": null,
+            "uco-observable:keywordSearchTerm": [],
             "uco-observable:lastVisit": null,
             "uco-observable:manuallyEnteredCount": null,
             "uco-observable:pageTitle": null,
-            "uco-observable:referrerUrl": null,
+            "uco-observable:referrerUrl": [],
             "uco-observable:url": null,
             "uco-observable:visitCount": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

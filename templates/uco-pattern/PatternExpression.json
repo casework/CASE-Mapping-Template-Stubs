@@ -1,16 +1,13 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-pattern": "https://ontology.unifiedcyberontology.org/uco/pattern#"
+        "uco-pattern": "https://ontology.unifiedcyberontology.org/uco/pattern/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:patternexpression1",
+            "@id": "kb:PatternExpression-1",
             "@type": "uco-pattern:PatternExpression"
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

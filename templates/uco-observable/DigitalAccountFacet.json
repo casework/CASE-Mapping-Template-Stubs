@@ -1,21 +1,18 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:digitalaccountfacet1",
+            "@id": "kb:DigitalAccountFacet-1",
             "@type": "uco-observable:DigitalAccountFacet",
-            "uco-observable:accountLogin": null,
+            "uco-observable:accountLogin": [],
             "uco-observable:displayName": null,
             "uco-observable:firstLoginTime": null,
             "uco-observable:isDisabled": null,
             "uco-observable:lastLoginTime": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

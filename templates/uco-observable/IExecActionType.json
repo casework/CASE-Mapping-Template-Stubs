@@ -1,20 +1,17 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:iexecactiontype1",
+            "@id": "kb:IExecActionType-1",
             "@type": "uco-observable:IExecActionType",
             "uco-observable:execArguments": null,
-            "uco-observable:execProgramHashes": null,
+            "uco-observable:execProgramHashes": [],
             "uco-observable:execProgramPath": null,
             "uco-observable:execWorkingDirectory": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

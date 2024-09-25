@@ -1,18 +1,15 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-marking": "https://ontology.unifiedcyberontology.org/uco/marking#"
+        "uco-marking": "https://ontology.unifiedcyberontology.org/uco/marking/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:releasetomarking1",
+            "@id": "kb:ReleaseToMarking-1",
             "@type": "uco-marking:ReleaseToMarking",
-            "uco-marking:authorizedIdentities": null,
-            "uco-marking:definitionType": null
+            "uco-marking:authorizedIdentities": [],
+            "uco-marking:definitionType": []
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

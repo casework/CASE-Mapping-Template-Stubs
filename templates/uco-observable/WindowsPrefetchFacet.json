@@ -1,14 +1,15 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:windowsprefetchfacet1",
+            "@id": "kb:WindowsPrefetchFacet-1",
             "@type": "uco-observable:WindowsPrefetchFacet",
-            "uco-observable:accessedDirectory": null,
-            "uco-observable:accessedFile": null,
+            "uco-observable:accessedDirectory": [],
+            "uco-observable:accessedFile": [],
             "uco-observable:applicationFileName": null,
             "uco-observable:firstRun": null,
             "uco-observable:lastRun": null,
@@ -16,9 +17,5 @@
             "uco-observable:timesExecuted": null,
             "uco-observable:volume": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

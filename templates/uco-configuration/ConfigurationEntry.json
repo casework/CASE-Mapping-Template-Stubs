@@ -1,0 +1,18 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-configuration": "https://ontology.unifiedcyberontology.org/uco/configuration/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:ConfigurationEntry-1",
+            "@type": "uco-configuration:ConfigurationEntry",
+            "uco-configuration:itemDescription": null,
+            "uco-configuration:itemName": null,
+            "uco-configuration:itemObject": [],
+            "uco-configuration:itemType": null,
+            "uco-configuration:itemValue": []
+        }
+    ]
+}

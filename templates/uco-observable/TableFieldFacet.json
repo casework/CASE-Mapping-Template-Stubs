@@ -1,0 +1,19 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:TableFieldFacet-1",
+            "@type": "uco-observable:TableFieldFacet",
+            "uco-observable:recordFieldIsNull": null,
+            "uco-observable:recordFieldName": null,
+            "uco-observable:recordFieldValue": null,
+            "uco-observable:recordRowID": null,
+            "uco-observable:tableName": null,
+            "uco-observable:tableSchema": null
+        }
+    ]
+}

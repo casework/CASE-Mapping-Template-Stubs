@@ -1,0 +1,18 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:CellSiteFacet-1",
+            "@type": "uco-observable:CellSiteFacet",
+            "uco-observable:cellSiteCountryCode": null,
+            "uco-observable:cellSiteIdentifier": null,
+            "uco-observable:cellSiteLocationAreaCode": null,
+            "uco-observable:cellSiteNetworkCode": null,
+            "uco-observable:cellSiteType": null
+        }
+    ]
+}

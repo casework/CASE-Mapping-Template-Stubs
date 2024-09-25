@@ -1,11 +1,12 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:messagefacet1",
+            "@id": "kb:MessageFacet-1",
             "@type": "uco-observable:MessageFacet",
             "uco-observable:application": null,
             "uco-observable:from": null,
@@ -14,11 +15,7 @@
             "uco-observable:messageType": null,
             "uco-observable:sentTime": null,
             "uco-observable:sessionID": null,
-            "uco-observable:to": null
+            "uco-observable:to": []
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

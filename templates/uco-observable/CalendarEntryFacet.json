@@ -1,14 +1,15 @@
 {
     "@context": {
         "kb": "http://example.org/kb/",
-        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable#"
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "kb:calendarentryfacet1",
+            "@id": "kb:CalendarEntryFacet-1",
             "@type": "uco-observable:CalendarEntryFacet",
             "uco-observable:application": null,
-            "uco-observable:attendant": null,
+            "uco-observable:attendant": [],
             "uco-observable:duration": null,
             "uco-observable:endTime": null,
             "uco-observable:eventStatus": null,
@@ -23,9 +24,5 @@
             "uco-observable:startTime": null,
             "uco-observable:subject": null
         }
-    ],
-    "@version": {
-        "case_util": "0.6.0",
-        "ontology_version": "0.7.0"
-    }
+    ]
 }

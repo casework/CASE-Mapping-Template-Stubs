@@ -1,0 +1,13 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:UcoInherentCharacterizationThing-1",
+            "@type": "uco-core:UcoInherentCharacterizationThing"
+        }
+    ]
+}
