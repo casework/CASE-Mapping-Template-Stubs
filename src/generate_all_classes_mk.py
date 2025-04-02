@@ -51,6 +51,23 @@ def main() -> None:
 
     target_to_recipe: Dict[str, str] = dict()
     for local_name in local_names:
+        # Note - dependency of all is .svg, recipe is intentionally .dot.
+        target_to_recipe[local_name + ".svg"] = (
+            """\
+%s.dot: \\
+  $(top_srcdir)/.venv.done.log \\
+  $(top_srcdir)/src/generate_single_stub_dot.py \\
+  $(top_srcdir)/var/facet_cardinalities.ttl
+\trm -f _$@
+\tsource $(top_srcdir)/venv/bin/activate \\
+\t  && python $(top_srcdir)/src/generate_single_stub_dot.py \\
+\t    _$@ \\
+\t    %s%s \\
+\t    $(top_srcdir)/var/facet_cardinalities.ttl
+\tmv _$@ $@
+"""
+            % (local_name, args.prefix_iri, local_name)
+        )
         target_to_recipe[local_name + ".json"] = (
             """\
 %s.json: \\
@@ -95,13 +112,25 @@ top_srcdir := ../..
 
 all: \
   %s
+"""
+            % " \\\n  ".join(sorted(target_to_recipe.keys()))
+        )
 
-check: \
+        out_fh.write(
+            """\
+%.svg: \\
+  %.dot
+\tdot \\
+\t  -T svg \\
+\t  -o _$@ \\
+\t  $<
+\tmv _$@ $@
+
+check: \\
   all
 
 clean:
 """
-            % " \\\n  ".join(sorted(target_to_recipe.keys()))
         )
 
         for target in sorted(target_to_recipe):
