@@ -18,6 +18,7 @@
                 {
                     "@id": "kb:DeviceFacet-1",
                     "@type": "uco-observable:DeviceFacet",
+                    "uco-observable:cpeid": null,
                     "uco-observable:deviceType": null,
                     "uco-observable:manufacturer": null,
                     "uco-observable:model": null,
@@ -33,6 +34,7 @@
             "uco-core:name": null,
             "uco-core:objectCreatedTime": null,
             "uco-core:objectMarking": [],
+            "uco-core:objectStatus": null,
             "uco-core:specVersion": null,
             "uco-core:tag": [],
             "uco-observable:hasChanged": null,
