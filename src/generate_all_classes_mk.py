@@ -14,9 +14,18 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+"""
+This script generates a Makefile that sets up recursive calls for all
+classes directly defined within an ontology within CDO (e.g., the
+classes in CASE's Investigation ontology).
+
+The intended execution location for this script is any 2nd-level
+directory `/templates/X`, where X is the prefix name for the ontology
+(e.g., `templates/case-investigation`).
+"""
+
 import argparse
 import importlib.resources
-from typing import Dict, Set
 
 import case_utils.ontology
 from case_utils.namespace import NS_OWL, NS_RDF
@@ -33,14 +42,14 @@ def main() -> None:
     ttl_data = importlib.resources.read_text(case_utils.ontology, "case-1.4.0.ttl")
     graph.parse(data=ttl_data)
 
-    n_classes: Set[URIRef] = set()
+    n_classes: set[URIRef] = set()
     for n_subject in graph.subjects(NS_RDF.type, NS_OWL.Class):
         if not isinstance(n_subject, URIRef):
             continue
         if str(n_subject).startswith(args.prefix_iri):
             n_classes.add(n_subject)
 
-    local_names: Set[str] = set()
+    local_names: set[str] = set()
     for n_class in n_classes:
         prefix, n_namespace, local_name = graph.namespace_manager.compute_qname(
             n_class, False
@@ -49,46 +58,42 @@ def main() -> None:
             raise ValueError("Encountered same local name twice: %r." % local_name)
         local_names.add(local_name)
 
-    target_to_recipe: Dict[str, str] = dict()
+    target_to_recipe: dict[str, str] = dict()
     for local_name in local_names:
-        # Note - dependency of all is .svg, recipe is intentionally .dot.
-        target_to_recipe[local_name + ".svg"] = (
+        target_to_recipe[local_name + "/Makefile"] = (
             """\
-%s.dot: \\
-  $(top_srcdir)/.venv.done.log \\
-  $(top_srcdir)/src/generate_single_stub_dot.py \\
-  $(top_srcdir)/var/facet_cardinalities.ttl
-\trm -f _$@
-\tsource $(top_srcdir)/venv/bin/activate \\
-\t  && python $(top_srcdir)/src/generate_single_stub_dot.py \\
-\t    _$@ \\
-\t    %s%s \\
-\t    $(top_srcdir)/var/facet_cardinalities.ttl
-\tmv _$@ $@
+
+%s/Makefile: \\
+  $(top_srcdir_abspath)/src/class-copy-template.mk.in
+\tmkdir \\
+\t  -p \\
+\t  %s
+\tsed \\
+\t  -e 's!@PREFIX_IRI@!%s!g' \\
+\t  $< \\
+\t  > $@_
+\tmv $@_ $@
 """
-            % (local_name, args.prefix_iri, local_name)
+            % (local_name, local_name, args.prefix_iri)
         )
-        target_to_recipe[local_name + ".json"] = (
+        target_to_recipe["all-" + local_name] = (
             """\
-%s.json: \\
-  $(top_srcdir)/.venv.done.log \\
-  $(top_srcdir)/src/generate_single_stub_json.py \\
-  $(top_srcdir)/var/facet_cardinalities.ttl
-\trm -f _$@
-\tsource $(top_srcdir)/venv/bin/activate \\
-\t  && python $(top_srcdir)/src/generate_single_stub_json.py \\
-\t    _$@ \\
-\t    %s%s \\
-\t    $(top_srcdir)/var/facet_cardinalities.ttl
-\tmv _$@ $@
+
+all-%s: \\
+  %s/Makefile
+\t$(MAKE) \\
+\t  --directory %s
 """
-            % (local_name, args.prefix_iri, local_name)
+            % (local_name, local_name, local_name)
         )
+
+    targets_as_dependencies: str = "".join(
+        [" \\\n  " + x for x in sorted(target_to_recipe.keys()) if x.startswith("all-")]
+    )
 
     with open(args.out_mk, "w") as out_fh:
         out_fh.write(
-            r"""\
-#!/usr/bin/make -f
+            r"""#!/usr/bin/make -f
 
 # Portions of this file contributed by NIST are governed by the
 # following statement:
@@ -108,28 +113,26 @@ def main() -> None:
 
 SHELL := /bin/bash
 
-top_srcdir := ../..
+top_srcdir_relpath := ../..
 
-all: \
-  %s
+top_srcdir_abspath := $(shell cd $(top_srcdir_relpath) ; pwd)
+
+all:%s
+
+.PHONY:%s
 """
-            % " \\\n  ".join(sorted(target_to_recipe.keys()))
+            % (targets_as_dependencies, targets_as_dependencies)
         )
 
         out_fh.write(
             """\
-%.svg: \\
-  %.dot
-\tdot \\
-\t  -T svg \\
-\t  -o _$@ \\
-\t  $<
-\tmv _$@ $@
 
 check: \\
   all
 
 clean:
+\t@rm -f \\
+\t  */*.{dot,json,svg}
 """
         )
 

@@ -14,6 +14,15 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+"""
+This script generates a Makefile that sets up recursive calls for all
+ontologies known to CASE (e.g., CASE's Investigation ontology, UCO's
+Observable ontology).
+
+The intended execution location for this script is the top-level
+directory `/templates`.
+"""
+
 import argparse
 import importlib.resources
 from typing import Dict, Set
@@ -71,6 +80,7 @@ def main() -> None:
         prefix_name = n_prefix_to_prefix_name[n_prefix]
         target_to_recipe["all-" + n_prefix_to_prefix_name[n_prefix]] = (
             """\
+
 all-%s:
 \t$(MAKE) \\
 \t  PREFIX_IRI="%s" \\
