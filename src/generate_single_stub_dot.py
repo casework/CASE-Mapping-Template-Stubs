@@ -105,7 +105,7 @@ def main() -> None:
     logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO)
 
     graph = Graph()
-    ttl_data = importlib.resources.read_text(case_utils.ontology, "case-1.3.0.ttl")
+    ttl_data = importlib.resources.read_text(case_utils.ontology, "case-1.4.0.ttl")
     graph.parse(data=ttl_data)
     logging.debug("len(graph) = %d.", len(graph))
 

@@ -21,14 +21,13 @@
                 "uco-observable:bitness": null,
                 "uco-observable:environmentVariables": null,
                 "uco-observable:installDate": null,
-                "uco-observable:isLimitAdTrackingEnabled": null,
-                "uco-observable:manufacturer": null,
-                "uco-observable:version": null
+                "uco-observable:isLimitAdTrackingEnabled": null
             },
             "uco-core:modifiedTime": [],
             "uco-core:name": null,
             "uco-core:objectCreatedTime": null,
             "uco-core:objectMarking": [],
+            "uco-core:objectStatus": null,
             "uco-core:specVersion": null,
             "uco-core:tag": [],
             "uco-observable:hasChanged": null,

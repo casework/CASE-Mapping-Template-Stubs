@@ -1,7 +1,7 @@
 # CASE Mapping Template Stubs
 
 [![Continuous Integration](https://github.com/casework/CASE-Mapping-Template-Stubs/actions/workflows/ci.yml/badge.svg)](https://github.com/casework/CASE-Mapping-Template-Stubs/actions/workflows/ci.yml)
-![CASE Version](https://img.shields.io/badge/CASE%20Version-1.3.0-green)
+![CASE Version](https://img.shields.io/badge/CASE%20Version-1.4.0-green)
 
 This template repository is provided for those looking to draft JSON-oriented utilities using ontologies within the [Cyber Domain Ontology](https://cyberdomainontology.org) ecosystem, particularly [CASE](https://caseontology.org) and [UCO](https://unifiedcyberontology.org).  "Stub" JSON dictionaries are provided for each class within CASE and UCO, generated from the ontologies.
 

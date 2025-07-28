@@ -34,7 +34,7 @@ def main() -> None:
 
     in_graph = Graph()
     out_graph = Graph()
-    ttl_data = importlib.resources.read_text(case_utils.ontology, "case-1.3.0.ttl")
+    ttl_data = importlib.resources.read_text(case_utils.ontology, "case-1.4.0.ttl")
     in_graph.parse(data=ttl_data)
     case_utils.ontology.load_subclass_hierarchy(in_graph)
 

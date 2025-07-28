@@ -30,7 +30,7 @@ def main() -> None:
     args = parser.parse_args()
 
     graph = Graph()
-    ttl_data = importlib.resources.read_text(case_utils.ontology, "case-1.3.0.ttl")
+    ttl_data = importlib.resources.read_text(case_utils.ontology, "case-1.4.0.ttl")
     graph.parse(data=ttl_data)
 
     n_classes: Set[URIRef] = set()
