@@ -14,7 +14,7 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 import argparse
 import hashlib
@@ -251,7 +251,7 @@ digraph "hierarchy" {
             edge_label = {
                 N_HAS_FACET_AT_CLASS_LEVEL: "",
                 NS_RDF.type: "∈",
-                NS_RDFS.subClassOf: "⊂",
+                NS_RDFS.subClassOf: "⊏",
             }[triple[1]]
             head_arrow = {
                 N_HAS_FACET_AT_CLASS_LEVEL: "dot",
