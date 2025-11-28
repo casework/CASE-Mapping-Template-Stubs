@@ -14,7 +14,7 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 import argparse
 import hashlib
@@ -98,7 +98,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--debug", action="store_true")
     parser.add_argument("out_dot")
-    parser.add_argument("class_iri")
+    parser.add_argument("subject_iri")
     parser.add_argument("supplemental_graph", nargs="*")
     args = parser.parse_args()
 
@@ -118,12 +118,21 @@ def main() -> None:
     for key in CDO_CONTEXT:
         graph.bind(key, CDO_CONTEXT[key])
 
-    n_subject_class = URIRef(args.class_iri)
-    if (n_subject_class, NS_RDF.type, NS_OWL.Class) not in graph:
+    n_subject = URIRef(args.subject_iri)
+    n_subject_classes: set[URIRef] = set()
+    for triple in graph.triples((n_subject, NS_RDF.type, NS_OWL.Class)):
+        n_subject_classes.add(n_subject)
+    if len(n_subject_classes) == 0:
+        for n_object in graph.objects(n_subject, NS_RDF.type):
+            if isinstance(n_object, URIRef):
+                n_subject_classes.add(n_object)
+    if len(n_subject_classes) == 0:
         raise ValueError(
-            "Requested class IRI not found in CASE graph: %r." % args.class_iri
+            "No class IRIs found as or for requested subject IRI: %r."
+            % args.subject_iri
         )
 
+    # BOOKMARK^
     for construct_query in [
         """\
 # 'Expand' syntax of OWL unions to get entailed direct-subclass relationships.
@@ -173,7 +182,7 @@ CONSTRUCT {
         for new_triple in new_triples:
             graph.add(new_triple)
 
-    n_classes_to_display: set[URIRef] = {n_subject_class}
+    n_classes_to_display: set[URIRef] = set()
     query = """\
 SELECT ?nRelatedClass
 WHERE {
@@ -196,12 +205,17 @@ WHERE {
   FILTER (isIRI(?nRelatedClass))
 }
 """
-    for result in graph.query(query, initBindings={"nClass": n_subject_class}):
-        assert isinstance(result, ResultRow)
-        assert isinstance(result[0], URIRef)
-        n_classes_to_display.add(result[0])
+    for n_subject_class in n_subject_classes:
+        for result in graph.query(query, initBindings={"nClass": n_subject_class}):
+            assert isinstance(result, ResultRow)
+            assert isinstance(result[0], URIRef)
+            n_classes_to_display.add(result[0])
 
     triples_to_display: set[tuple[URIRef, URIRef, URIRef]] = set()
+    for triple in graph.triples((n_subject, NS_RDF.type, None)):
+        if not isinstance(triple[2], URIRef):
+            continue
+        triples_to_display.add((n_subject, NS_RDF.type, triple[2]))
     for n_class in n_classes_to_display:
         for n_linking_predicate in [
             N_HAS_FACET_AT_CLASS_LEVEL,
@@ -214,9 +228,9 @@ WHERE {
 
     # Reduce display-sets: Cut modeling classes.
     classes_to_not_display = {NS_OWL.Class, NS_OWL.Restriction, NS_SH.NodeShape}
-    filtered_classes = [
+    n_individuals_to_display = {n_subject} | {
         x for x in n_classes_to_display if x not in classes_to_not_display
-    ]
+    }
     filtered_triples = [
         x
         for x in triples_to_display
@@ -231,15 +245,15 @@ digraph "hierarchy" {
 \t//Nodes
 """
         )
-        for n_class in sorted(filtered_classes):
+        for n_individual in sorted(n_individuals_to_display):
             out_fh.write(
                 """\
 \t%s [label="%s" tooltip="%s"];
 """
                 % (
-                    iri_to_gv_node_id(n_class),
-                    graph.namespace_manager.qname(n_class),
-                    str(n_class),
+                    iri_to_gv_node_id(n_individual),
+                    graph.namespace_manager.qname(n_individual),
+                    str(n_individual),
                 )
             )
         out_fh.write(
@@ -295,6 +309,9 @@ digraph "hierarchy" {
 }
 """
         )
+
+
+# BOOKMARKv
 
 
 if __name__ == "__main__":
