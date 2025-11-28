@@ -14,7 +14,7 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 import argparse
 import hashlib
@@ -248,12 +248,11 @@ digraph "hierarchy" {
 """
         )
         for triple in sorted(filtered_triples):
-            edge_label = {
-                N_HAS_FACET_AT_CLASS_LEVEL: "",
-                NS_RDF.type: "∈",
-                NS_RDFS.subClassOf: "⊂",
-            }[triple[1]]
+            edge_style = {
+                NS_RDF.type: "dashed",
+            }.get(triple[1], "solid")
             head_arrow = {
+                NS_RDFS.subClassOf: "onormal",
                 N_HAS_FACET_AT_CLASS_LEVEL: "dot",
             }.get(triple[1], "normal")
             head_label = {
@@ -261,14 +260,14 @@ digraph "hierarchy" {
             }.get(triple[1], "")
             out_fh.write(
                 """\
-\t%s -> %s [arrowhead="%s" headlabel="%s" label="%s"];
+\t%s -> %s [arrowhead="%s" headlabel="%s" style="%s"];
 """
                 % (
                     iri_to_gv_node_id(triple[0]),
                     iri_to_gv_node_id(triple[2]),
                     head_arrow,
                     head_label,
-                    edge_label,
+                    edge_style,
                 )
             )
 
