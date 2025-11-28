@@ -19,9 +19,30 @@ SHELL := /bin/bash
 top_srcdir := ..
 
 all: \
-  InvestigativeAction.json \
+  InvestigativeAction.svg \
+  ArchiveFile.svg \
+  Bag.svg
+
+%.svg: \
+  %.dot
+	dot \
+	  -T svg \
+	  -o _$@ \
+	  $<
+	mv _$@ $@
+
+ArchiveFile.dot: \
   ArchiveFile.json \
-  Bag.json
+  $(top_srcdir)/src/generate_single_stub_dot.py \
+  $(top_srcdir)/var/facet_cardinalities.ttl
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/generate_single_stub_dot.py \
+	    _$@ \
+	    http://example.org/kb/ArchiveFile-1 \
+	    $(top_srcdir)/var/facet_cardinalities.ttl \
+	    ArchiveFile.json
+	mv _$@ $@
 
 ArchiveFile.json: \
   $(top_srcdir)/.venv.done.log \
@@ -40,6 +61,19 @@ ArchiveFile.json: \
 	rm __$@
 	mv _$@ $@
 
+Bag.dot: \
+  Bag.json \
+  $(top_srcdir)/src/generate_single_stub_dot.py \
+  $(top_srcdir)/var/facet_cardinalities.ttl
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/generate_single_stub_dot.py \
+	    _$@ \
+	    http://example.org/kb/Bag-1 \
+	    $(top_srcdir)/var/facet_cardinalities.ttl \
+	    Bag.json
+	mv _$@ $@
+
 Bag.json: \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/src/generate_single_stub_json.py \
@@ -55,6 +89,19 @@ Bag.json: \
 	  __$@ \
 	  _$@
 	rm __$@
+	mv _$@ $@
+
+InvestigativeAction.dot: \
+  InvestigativeAction.json \
+  $(top_srcdir)/src/generate_single_stub_dot.py \
+  $(top_srcdir)/var/facet_cardinalities.ttl
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/generate_single_stub_dot.py \
+	    _$@ \
+	    http://example.org/kb/InvestigativeAction-1 \
+	    $(top_srcdir)/var/facet_cardinalities.ttl \
+	    InvestigativeAction.json
 	mv _$@ $@
 
 InvestigativeAction.json: \
@@ -79,4 +126,6 @@ check: \
 
 clean:
 	@rm -f \
-	  *.json
+	  *.dot \
+	  *.json \
+	  *.svg
