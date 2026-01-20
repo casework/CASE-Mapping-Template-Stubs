@@ -78,21 +78,17 @@ def main() -> None:
     target_to_recipe: Dict[str, str] = dict()
     for n_prefix in n_prefix_to_prefix_name:
         prefix_name = n_prefix_to_prefix_name[n_prefix]
-        target_to_recipe["all-" + n_prefix_to_prefix_name[n_prefix]] = (
-            """\
+        target_to_recipe["all-" + n_prefix_to_prefix_name[n_prefix]] = """\
 
 all-%s:
 \t$(MAKE) \\
 \t  PREFIX_IRI="%s" \\
 \t  --directory %s
-"""
-            % (prefix_name, str(n_prefix), prefix_name)
-        )
+""" % (prefix_name, str(n_prefix), prefix_name)
 
     with open(args.out_mk, "w") as out_fh:
         targets_formatted = " \\\n  ".join(sorted(target_to_recipe.keys()))
-        out_fh.write(
-            """\
+        out_fh.write("""\
 #!/usr/bin/make -f
 
 # Portions of this file contributed by NIST are governed by the
@@ -125,9 +121,7 @@ check: \\
   all
 
 clean:
-"""
-            % (targets_formatted, targets_formatted)
-        )
+""" % (targets_formatted, targets_formatted))
 
         for target in sorted(target_to_recipe):
             out_fh.write(target_to_recipe[target])

@@ -60,8 +60,7 @@ def main() -> None:
 
     target_to_recipe: dict[str, str] = dict()
     for local_name in local_names:
-        target_to_recipe[local_name + "/Makefile"] = (
-            """\
+        target_to_recipe[local_name + "/Makefile"] = """\
 
 %s/Makefile: \\
   $(top_srcdir_abspath)/src/class-copy-template.mk.in
@@ -73,27 +72,21 @@ def main() -> None:
 \t  $< \\
 \t  > $@_
 \tmv $@_ $@
-"""
-            % (local_name, local_name, args.prefix_iri)
-        )
-        target_to_recipe["all-" + local_name] = (
-            """\
+""" % (local_name, local_name, args.prefix_iri)
+        target_to_recipe["all-" + local_name] = """\
 
 all-%s: \\
   %s/Makefile
 \t$(MAKE) \\
 \t  --directory %s
-"""
-            % (local_name, local_name, local_name)
-        )
+""" % (local_name, local_name, local_name)
 
     targets_as_dependencies: str = "".join(
         [" \\\n  " + x for x in sorted(target_to_recipe.keys()) if x.startswith("all-")]
     )
 
     with open(args.out_mk, "w") as out_fh:
-        out_fh.write(
-            r"""#!/usr/bin/make -f
+        out_fh.write(r"""#!/usr/bin/make -f
 
 # Portions of this file contributed by NIST are governed by the
 # following statement:
@@ -120,12 +113,9 @@ top_srcdir_abspath := $(shell cd $(top_srcdir_relpath) ; pwd)
 all:%s
 
 .PHONY:%s
-"""
-            % (targets_as_dependencies, targets_as_dependencies)
-        )
+""" % (targets_as_dependencies, targets_as_dependencies))
 
-        out_fh.write(
-            """\
+        out_fh.write("""\
 
 check: \\
   all
@@ -133,8 +123,7 @@ check: \\
 clean:
 \t@rm -f \\
 \t  */*.{dot,json,svg}
-"""
-        )
+""")
 
         for target in sorted(target_to_recipe):
             out_fh.write(target_to_recipe[target])

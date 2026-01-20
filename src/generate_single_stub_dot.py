@@ -224,13 +224,11 @@ WHERE {
     ]
 
     with open(args.out_dot, "w") as out_fh:
-        out_fh.write(
-            """\
+        out_fh.write("""\
 digraph "hierarchy" {
 \trankdir="BT";
 \t//Nodes
-"""
-        )
+""")
         for n_class in sorted(filtered_classes):
             out_fh.write(
                 """\
@@ -242,11 +240,9 @@ digraph "hierarchy" {
                     str(n_class),
                 )
             )
-        out_fh.write(
-            """\
+        out_fh.write("""\
 \t//Edges
-"""
-        )
+""")
         for triple in sorted(filtered_triples):
             edge_label = {
                 N_HAS_FACET_AT_CLASS_LEVEL: "",
@@ -290,11 +286,9 @@ digraph "hierarchy" {
                     iri_to_gv_node_id(triple[2]),
                 )
             )
-        out_fh.write(
-            """\
+        out_fh.write("""\
 }
-"""
-        )
+""")
 
 
 if __name__ == "__main__":
