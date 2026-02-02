@@ -14,7 +14,7 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 import argparse
 import hashlib
@@ -244,6 +244,9 @@ digraph "hierarchy" {
 \t//Edges
 """)
         for triple in sorted(filtered_triples):
+            # NOTE - Code here has a currently-fragile manual
+            # synchronization need with code in the legend-rendering
+            # block below.  A function may better suit this.
             edge_label = {
                 N_HAS_FACET_AT_CLASS_LEVEL: "",
                 NS_RDF.type: "∈",
@@ -286,6 +289,47 @@ digraph "hierarchy" {
                     iri_to_gv_node_id(triple[2]),
                 )
             )
+
+        # NOTE - Code here has a currently-fragile manual
+        # synchronization need with code in the edges-rendering block
+        # above.  A function may better suit this.
+        n_predicates_for_legend: set[URIRef] = {x[1] for x in filtered_triples} & {
+            N_HAS_FACET_AT_CLASS_LEVEL,
+            NS_RDF.type,
+            NS_RDFS.subClassOf,
+        }
+        if len(n_predicates_for_legend) > 0:
+            out_fh.write("""\
+\tsubgraph cluster_legend {
+\t\tlabel="Legend";
+\t\tlabelloc="b";
+\t\trankdir="BT";
+""")
+            if N_HAS_FACET_AT_CLASS_LEVEL in n_predicates_for_legend:
+                out_fh.write("""\
+\t\tsubgraph ranker_legend_facets {
+\t\t\trank="same"
+\t\t\tlegend_hf_bearer [label="UcoObject class"];
+\t\t\tlegend_hf_facet [label="Facet class"];
+\t\t\tlegend_hf_bearer -> legend_hf_facet [arrowhead="dot" headlabel="0..1" label=""];
+\t\t}
+""")
+            if NS_RDF.type in n_predicates_for_legend:
+                out_fh.write("""\
+\t\tlegend_instance [label="Instance"];
+\t\tlegend_class [label="Class"];
+\t\tlegend_instance -> legend_class [arrowhead="normal" headlabel="" label="∈"];
+""")
+            if NS_RDFS.subClassOf in n_predicates_for_legend:
+                out_fh.write("""\
+\t\tlegend_subclass [label="Subclass"];
+\t\tlegend_superclass [label="Superclass"];
+\t\tlegend_subclass -> legend_superclass [arrowhead="normal" headlabel="" label="⊂"];
+""")
+            out_fh.write("""\
+}
+""")
+
         out_fh.write("""\
 }
 """)
