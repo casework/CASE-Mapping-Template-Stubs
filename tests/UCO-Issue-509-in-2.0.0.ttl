@@ -1,0 +1,41 @@
+@prefix co: <http://purl.org/co/> .
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology/UCO-Issue-509-in-2.0.0>
+	a owl:Ontology ;
+	rdfs:comment "This ontology is an excerpt of UCO with the effects of PR 517 applied for Issue 509.  It is provided for demonstration of CASE ontology substitution feature in a visualization script.  Prior to UCO 2.0.0, types:ThreadItem is a direct subclass of core:UcoThing.  PR 517 moved types:ThreadItem to instead be a subclass of core:UcoInherentCharacterizationThing."@en ;
+	rdfs:seeAlso
+		<https://github.com/ucoProject/UCO/issues/509> ,
+		<https://github.com/ucoProject/UCO/pull/517>
+		;
+	.
+
+co:Item
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	.
+
+core:UcoInherentCharacterizationThing
+	a owl:Class ;
+	rdfs:subClassOf core:UcoThing ;
+	.
+
+core:UcoThing
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	.
+
+types:ThreadItem
+	a owl:Class ;
+	rdfs:subClassOf
+		co:Item ,
+		core:UcoInherentCharacterizationThing
+		;
+	rdfs:comment "When this ontology graph is used instead of any UCO prior to 2.0.0, the visualization will show two direct parent classes.  If this ontology graph is used in addition to a UCO prior to 2.0.0, three direct parent classes will be shown."@en ;
+	.
+
