@@ -1,4 +1,4 @@
 PyLD
-case-utils >= 0.17.0
+case-utils >= 0.18.0
 mypy
 pytest
