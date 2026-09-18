@@ -1,0 +1,19 @@
+# First-slice query from casework/CASE-Mapping-Template-Stubs#10 (ajnelson-nist).
+# Mimic schema:domainIncludes / dcam:domainIncludes for a UCO property that
+# has no rdfs:domain: walk SHACL node shapes whose sh:property/sh:path is
+# the property IRI.
+#
+# Run against a monolithic UCO ontology build (issue: UCO develop as of
+# 2025-04-03). IRI-valued sh:path only. List-valued sh:path (e.g.
+# uco-observable:MessageThread, UCO 1.3.0 observable.ttl L4212–L4229) is
+# out of this slice.
+
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/>
+SELECT ?nClass
+WHERE {
+	?nClass
+		sh:property / sh:path uco-observable:value ;
+		.
+}
+ORDER BY ?nClass
