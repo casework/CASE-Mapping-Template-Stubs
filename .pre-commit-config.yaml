@@ -15,15 +15,15 @@ repos:
             - --indent=4
             - --no-ensure-ascii
   - repo: https://github.com/psf/black
-    rev: 26.5.1
+    rev: 26.10.1
     hooks:
       - id: black
   - repo: https://github.com/pycqa/flake8
-    rev: 7.3.0
+    rev: 7.5.0
     hooks:
       - id: flake8
   - repo: https://github.com/pycqa/isort
-    rev: 9.0.1
+    rev: 10.0.0b3
     hooks:
       - id: isort
         name: isort (python)
