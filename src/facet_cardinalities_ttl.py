@@ -15,28 +15,38 @@
 # We would appreciate acknowledgement if the software is used.
 
 import argparse
-import importlib.resources
 import logging
 from typing import Set
 
-import case_utils.ontology
+from case_utils.case_validate.validate_utils import get_ontology_graph
 from case_utils.namespace import NS_OWL, NS_RDF, NS_RDFS, NS_UCO_CORE, NS_XSD
+from case_utils.ontology import load_subclass_hierarchy
+from case_utils.ontology.version_info import (
+    CURRENT_CASE_VERSION,
+    built_version_choices_list,
+)
 from rdflib import BNode, Graph, Literal, URIRef
 from rdflib.query import ResultRow
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--built-version",
+        choices=tuple(built_version_choices_list),
+        default="case-" + CURRENT_CASE_VERSION,
+        help="Monolithic aggregation of CASE ontology files at certain versions.  Does not require networking to use.  Default is most recent CASE release.  Passing 'none' will mean no pre-built CASE ontology versions accompanying case-utils will be included in the analysis.",
+    )
     parser.add_argument("out_graph")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO)
 
-    in_graph = Graph()
+    in_graph: Graph = get_ontology_graph(args.built_version)
+    logging.debug("len(in_graph) = %d.", len(in_graph))
+    load_subclass_hierarchy(in_graph)
+
     out_graph = Graph()
-    ttl_data = importlib.resources.read_text(case_utils.ontology, "case-1.4.0.ttl")
-    in_graph.parse(data=ttl_data)
-    case_utils.ontology.load_subclass_hierarchy(in_graph)
 
     n_leaf_facet_classes: Set[URIRef] = set()
     leaf_facet_query = """\

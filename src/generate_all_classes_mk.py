@@ -25,22 +25,31 @@ directory `/templates/X`, where X is the prefix name for the ontology
 """
 
 import argparse
-import importlib.resources
+import logging
 
-import case_utils.ontology
+from case_utils.case_validate.validate_utils import get_ontology_graph
 from case_utils.namespace import NS_OWL, NS_RDF
+from case_utils.ontology.version_info import (
+    CURRENT_CASE_VERSION,
+    built_version_choices_list,
+)
 from rdflib import Graph, URIRef
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--built-version",
+        choices=tuple(built_version_choices_list),
+        default="case-" + CURRENT_CASE_VERSION,
+        help="Monolithic aggregation of CASE ontology files at certain versions.  Does not require networking to use.  Default is most recent CASE release.  Passing 'none' will mean no pre-built CASE ontology versions accompanying case-utils will be included in the analysis.",
+    )
     parser.add_argument("out_mk")
     parser.add_argument("prefix_iri")
     args = parser.parse_args()
 
-    graph = Graph()
-    ttl_data = importlib.resources.read_text(case_utils.ontology, "case-1.4.0.ttl")
-    graph.parse(data=ttl_data)
+    graph: Graph = get_ontology_graph(args.built_version)
+    logging.debug("len(graph) = %d.", len(graph))
 
     n_classes: set[URIRef] = set()
     for n_subject in graph.subjects(NS_RDF.type, NS_OWL.Class):

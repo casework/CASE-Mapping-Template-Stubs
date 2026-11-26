@@ -15,13 +15,12 @@
 # We would appreciate acknowledgement if the software is used.
 
 import argparse
-import importlib.resources
 import json
 import logging
 from typing import Dict, List, Optional, Set, Union
 
-import case_utils.ontology
 import pyld  # type: ignore
+from case_utils.case_validate.validate_utils import get_ontology_graph
 from case_utils.namespace import (
     NS_CASE_INVESTIGATION,
     NS_CASE_VOCABULARY,
@@ -43,6 +42,10 @@ from case_utils.namespace import (
     NS_UCO_VICTIM,
     NS_UCO_VOCABULARY,
     NS_XSD,
+)
+from case_utils.ontology.version_info import (
+    CURRENT_CASE_VERSION,
+    built_version_choices_list,
 )
 from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.query import ResultRow
@@ -432,6 +435,12 @@ def swap_values(
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--built-version",
+        choices=tuple(built_version_choices_list),
+        default="case-" + CURRENT_CASE_VERSION,
+        help="Monolithic aggregation of CASE ontology files at certain versions.  Does not require networking to use.  Default is most recent CASE release.  Passing 'none' will mean no pre-built CASE ontology versions accompanying case-utils will be included in the analysis.",
+    )
     parser.add_argument("--debug", action="store_true")
     parser.add_argument("out_json")
     parser.add_argument("class_iri")
@@ -440,9 +449,7 @@ def main() -> None:
 
     logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO)
 
-    graph = Graph()
-    ttl_data = importlib.resources.read_text(case_utils.ontology, "case-1.4.0.ttl")
-    graph.parse(data=ttl_data)
+    graph: Graph = get_ontology_graph(args.built_version)
     logging.debug("len(graph) = %d.", len(graph))
 
     if args.supplemental_graph:
